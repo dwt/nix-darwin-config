@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -e
+
 nix run nix-darwin -- build --flake .
 
 computerName=$(networksetup -getcomputername)
