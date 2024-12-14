@@ -1,0 +1,7 @@
+#!/bin/sh
+
+nix run nix-darwin -- build --flake .
+
+outPath=$(nix eval --raw .#darwinConfigurations.Sokrates.config.system.build.toplevel.outPath)
+
+nix run nixpkgs#nix-diff -- /run/current-system $outPath --color always
