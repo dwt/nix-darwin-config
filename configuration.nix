@@ -15,6 +15,15 @@
     finder.FXPreferredViewStyle = "clmv";
   };
 
+  # Run the linux-builder as a background service
+  # nix.linux-builder.enable = true;
+  # find a way to make this not be permanently on
+  # maybe https://github.com/cpick/nix-rosetta-builder
+  # More details on configuring this:
+  # https://nixcademy.com/posts/macos-linux-builder/
+  # How this can be used to run nixpkgs test
+  # https://nixcademy.com/posts/running-nixos-integration-tests-on-macos/
+
   # Enhance nix default setup for flakes and lix
   nix.settings = {
     experimental-features = "nix-command flakes";
