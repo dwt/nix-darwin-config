@@ -6,7 +6,16 @@
     [
     ];
 
-  # Necessary for using flakes on this system.
+  # allow sudo with touch id
+  security.pam.enableSudoTouchIdAuth = true;
+
+  # Some finder settings
+  system.defaults = {
+    finder.AppleShowAllExtensions = true;
+    finder.FXPreferredViewStyle = "clmv";
+  };
+
+  # Enhance nix default setup for flakes and lix
   nix.settings = {
     experimental-features = "nix-command flakes";
     bash-prompt-prefix = "(nix:$name)\040";
