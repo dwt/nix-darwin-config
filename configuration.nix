@@ -15,6 +15,24 @@
     finder.FXPreferredViewStyle = "clmv";
   };
 
+  environment.etc = {
+    # Enable kerberos authentication in Safari
+    "krb5.conf" = {
+      text = ''
+        [libdefaults]
+        default_realm = BKKVBU.LOCAL
+        dns_lookup_realm = true
+        dns_lookup_kdc = true
+
+        [domain_realm]
+        .root.intern = BKKVBU.LOCAL
+        .meine-krankenkasse.de = BKKVBU.LOCAL
+        .bkk-vbu.de = BKKVBU.LOCAL
+        .bkkvbu.local = BKKVBU.LOCAL
+      '';
+    };
+  };
+
   # Run the linux-builder as a background service
   # nix.linux-builder.enable = true;
   # find a way to make this not be permanently on
