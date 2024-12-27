@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ ... }:
 {
   environment.etc = {
     # Enable kerberos authentication in Safari
