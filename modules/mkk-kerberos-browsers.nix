@@ -18,11 +18,11 @@
     };
   };
 
-  # Enable kerberos authentication in Firefox
-  # https://devdoc.net/web/developer.mozilla.org/en-US/docs/Mozilla/Integrated_authentication.html
-  # https://mozilla.github.io/policy-templates/#authentication
-  # https://github.com/mozilla/policy-templates/tree/master/mac
   system.defaults.CustomUserPreferences = {
+    # Enable kerberos authentication in Firefox
+    # https://devdoc.net/web/developer.mozilla.org/en-US/docs/Mozilla/Integrated_authentication.html
+    # https://mozilla.github.io/policy-templates/#authentication
+    # https://github.com/mozilla/policy-templates/tree/master/mac
     "org.mozilla.firefox" = {
       "EnterprisePoliciesEnabled" = true;
       "Authentication" = {
@@ -37,6 +37,17 @@
         };
       };
     };
+
+    # Enable kerberos authentication in Chrome
+    # https://www.jeffgeerling.com/blogs/jeff-geerling/kerberos-authentication-mac-os
+    "com.google.Chrome" =
+      let
+        domains = "*.meine-krankenkasse.de, *.bkk-vbu.de, *.bkkvbu.local, *.root.intern";
+      in
+      {
+        "AuthServerWhitelist" = domains;
+        "AuthNegotiateDelegateWhitelist" = domains;
+      };
   };
 
 }
