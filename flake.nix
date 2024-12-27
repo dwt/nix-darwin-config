@@ -25,6 +25,7 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./configuration.nix
+          ./modules/mkk-kerberos-browsers.nix
           home-manager.darwinModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
