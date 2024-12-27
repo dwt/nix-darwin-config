@@ -11,9 +11,6 @@
     [
     ];
 
-  # allow sudo with touch id
-  security.pam.enableSudoTouchIdAuth = true;
-
   # Some finder settings
   system.defaults = {
     finder.AppleShowAllExtensions = true;

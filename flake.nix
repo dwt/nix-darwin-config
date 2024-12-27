@@ -17,7 +17,6 @@
       home-manager,
     }:
     {
-
       # Build darwin flake using:
       # $ darwin-rebuild build --flake .
       darwinConfigurations."Sokrates" = nix-darwin.lib.darwinSystem {
@@ -26,6 +25,7 @@
         modules = [
           ./configuration.nix
           ./modules/mkk-kerberos-browsers.nix
+          ./modules/sudo-with-biometrics.nix
           home-manager.darwinModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
