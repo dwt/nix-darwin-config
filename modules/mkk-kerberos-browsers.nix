@@ -39,14 +39,15 @@
     };
 
     # Enable kerberos authentication in Chrome
-    # https://www.jeffgeerling.com/blogs/jeff-geerling/kerberos-authentication-mac-os
     "com.google.Chrome" =
       let
-        domains = "*.meine-krankenkasse.de, *.bkk-vbu.de, *.bkkvbu.local, *.root.intern";
+        domains = "*.meine-krankenkasse.de,*.bkk-vbu.de,*.bkkvbu.local,*.root.intern";
       in
       {
-        "AuthServerWhitelist" = domains;
-        "AuthNegotiateDelegateWhitelist" = domains;
+        # https://chromeenterprise.google/policies/#AuthServerAllowlist
+        "AuthServerAllowlist" = domains;
+        # https://chromeenterprise.google/policies/#AuthNegotiateDelegateAllowlist
+        "AuthNegotiateDelegateAllowlist" = domains;
       };
   };
 
