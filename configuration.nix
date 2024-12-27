@@ -51,7 +51,6 @@
       "x86_64-darwin"
       "aarch64-darwin"
     ];
-
   };
 
   # Enable alternative shell support in nix-darwin.
