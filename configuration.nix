@@ -17,9 +17,9 @@
   ];
 
   # Some finder settings
-  system.defaults = {
-    finder.AppleShowAllExtensions = true;
-    finder.FXPreferredViewStyle = "clmv";
+  system.defaults.finder = {
+    AppleShowAllExtensions = true;
+    FXPreferredViewStyle = "clmv";
   };
 
   # homebrew = {
