@@ -1,11 +1,20 @@
-{ inputs, ... }:
+{ inputs, pkgs, ... }:
 {
+  # Enable alternative shell support in nix-darwin.
+  programs.fish.enable = true;
+  programs.fish.vendor.completions.enable = true;
+  programs.fish.vendor.config.enable = true;
+  programs.fish.vendor.functions.enable = true;
 
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
   environment.systemPackages =
     [
     ];
+
+  environment.shells = [
+    pkgs.fish
+  ];
 
   # Some finder settings
   system.defaults = {
@@ -48,9 +57,6 @@
       "aarch64-darwin"
     ];
   };
-
-  # Enable alternative shell support in nix-darwin.
-  programs.fish.enable = true;
 
   # Set Git commit hash for darwin-version.
   system.configurationRevision = inputs.self.rev or inputs.self.dirtyRev or null;
