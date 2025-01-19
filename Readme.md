@@ -9,3 +9,9 @@
 * [ ] Configure Firefox to do ntml authentication
 * [ ] Configure Ticket-Vierer to automatically get a kerberos ticket after logging in to the vpn
 * [ ] Automatically setup split vpn
+* [ ] switch to stable nixos and nix-darwin
+* [ ] Start building out infrastructure that allows other users to join the project
+  * [ ] centralized updating of dependencies `nix flake update`
+  * [ ] automated regular updates to the current flake. Weekly?
+  * [ ] more basic setup like full disk encryption
+  * [ ] ensure that it works for bash/zsh users!
