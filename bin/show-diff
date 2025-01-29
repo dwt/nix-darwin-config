@@ -8,6 +8,7 @@ computerName=$(networksetup -getcomputername)
 
 outPath=$(nix eval --raw .#darwinConfigurations.$computerName.config.system.build.toplevel.outPath)
 
+# currently fails https://github.com/Gabriella439/nix-diff/issues/98
 nix run nixpkgs#nix-diff -- /run/current-system $outPath --color always
 # nix run nixpkgs#nvd -- diff /run/current-system $outPath
 # nix profile diff-closures --profile ~/.local/state/nix/profiles/home-manager
