@@ -6,11 +6,6 @@
     ./modules/nix-linux-rosetta-builder.nix
   ];
 
-  # Enable alternative shell support in nix-darwin.
-  programs.fish.enable = true;
-  programs.fish.vendor.completions.enable = true;
-  programs.fish.vendor.config.enable = true;
-  programs.fish.vendor.functions.enable = true;
 
   # List packages installed in system profile. To search by name, run:
   # $ nix-env -qaP | grep wget
@@ -34,11 +29,7 @@
     devenv
   ];
 
-  # This only enables you to choose the new login shell in
-  # -> SystemSettings -> Users & Groups -> Right click on users
-  # "Advanced Settings" -> Change login shell
-  environment.shells = [
-    pkgs.fish
+    ./modules/enable-fish-support.nix
   ];
 
   # Some finder settings
