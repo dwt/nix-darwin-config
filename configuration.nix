@@ -4,32 +4,9 @@
     ./modules/mkk-kerberos-browsers.nix
     ./modules/sudo-with-biometrics.nix
     ./modules/nix-linux-rosetta-builder.nix
-  ];
-
-
-  # List packages installed in system profile. To search by name, run:
-  # $ nix-env -qaP | grep wget
-  environment.systemPackages = with pkgs; [
-    # TODO move these out into their own module
-    ## nix development
-    # https://github.com/Mic92/nixpkgs-review
-    nixpkgs-review # check pull requests
-    nixfmt-rfc-style # formatter
-    nixd # langauge server
-    nil # language server
-    # https://github.com/maralorn/nix-output-monitor
-    nix-output-monitor # visualize build output by piping stderr and stdout into `nom`
-    # https://github.com/nix-community/nix-index
-    nix-index # search which package provides a specific file
-    nix-diff # compare nix derivations
-
-    # TODO move out into a local nix development module
-    ## working with local nix projects
-    direnv
-    devenv
-  ];
-
     ./modules/enable-fish-support.nix
+    ./modules/nix-development-and-debugging-support.nix
+    ./modules/nix-project-support.nix
   ];
 
   # Some finder settings
