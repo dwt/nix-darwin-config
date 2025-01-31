@@ -3,6 +3,12 @@
   ...
 }:
 {
+  # https://github.com/cpick/nix-rosetta-builder
+  # More details on configuring this:
+  # https://nixcademy.com/posts/macos-linux-builder/
+  # How this can be used to run nixpkgs test
+  # https://nixcademy.com/posts/running-nixos-integration-tests-on-macos/
+
   imports = [
     # An existing Linux builder is needed to initially bootstrap `nix-rosetta-builder`.
     # If one isn't already available: comment out the `nix-rosetta-builder` module below,
@@ -19,4 +25,5 @@
   # This way it auto shuts down after 3h inactivity,
   # while the delay on first launch is almost neglible with about 5-10s.
   nix-rosetta-builder.onDemand = true;
+
 }

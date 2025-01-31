@@ -19,15 +19,6 @@
   #   enable = true;
   # };
 
-  # Run the linux-builder as a background service
-  # nix.linux-builder.enable = true;
-  # find a way to make this not be permanently on
-  # maybe https://github.com/cpick/nix-rosetta-builder
-  # More details on configuring this:
-  # https://nixcademy.com/posts/macos-linux-builder/
-  # How this can be used to run nixpkgs test
-  # https://nixcademy.com/posts/running-nixos-integration-tests-on-macos/
-
   # Prevent warning because of https://github.com/LnL7/nix-darwin/issues/145
   nix.channel.enable = false;
 
