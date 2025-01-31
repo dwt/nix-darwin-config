@@ -1,6 +1,5 @@
 #!/bin/sh
 
-nix flake update --commit-lock-file
 echo "When this hangs at the end, then probably because sudo waits for input."
 echo "Try calling this from a real terminal to trigger biometric sudo correctly."
 nix run nix-darwin -- switch --flake . 2>&1 | nom
