@@ -25,5 +25,4 @@
   # This way it auto shuts down after 3h inactivity,
   # while the delay on first launch is almost neglible with about 5-10s.
   nix-rosetta-builder.onDemand = true;
-
 }
