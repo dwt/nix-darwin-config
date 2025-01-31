@@ -26,7 +26,7 @@
     }:
     {
       # Build darwin flake using:
-      # $ darwin-rebuild build --flake .
+      # $ bin/switch
       darwinConfigurations."Sokrates" = nix-darwin.lib.darwinSystem {
         system = "aarch64-darwin";
         specialArgs = { inherit inputs; };
