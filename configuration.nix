@@ -3,6 +3,7 @@
   imports = [
     ./modules/mkk-kerberos-browsers.nix
     ./modules/sudo-with-biometrics.nix
+    ./modules/nix-linux-rosetta-builder.nix
   ];
 
   # Enable alternative shell support in nix-darwin.
