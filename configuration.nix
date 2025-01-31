@@ -66,6 +66,7 @@
   # Enhance nix default setup for flakes and lix
   nix.settings = {
     experimental-features = "nix-command flakes";
+    # TODO is this really neccessary? I probably just want the default.
     bash-prompt-prefix = "(nix:$name)\040";
     substituters = [
       "https://cache.nixos.org"
