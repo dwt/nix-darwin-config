@@ -1,5 +1,10 @@
 { inputs, pkgs, ... }:
 {
+  imports = [
+    ./modules/mkk-kerberos-browsers.nix
+    ./modules/sudo-with-biometrics.nix
+  ];
+
   # Enable alternative shell support in nix-darwin.
   programs.fish.enable = true;
   programs.fish.vendor.completions.enable = true;

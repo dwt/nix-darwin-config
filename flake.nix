@@ -33,8 +33,7 @@
         modules = [
           lix-module.nixosModules.default
           ./configuration.nix
-          ./modules/mkk-kerberos-browsers.nix
-          ./modules/sudo-with-biometrics.nix
+
           # An existing Linux builder is needed to initially bootstrap `nix-rosetta-builder`.
           # If one isn't already available: comment out the `nix-rosetta-builder` module below,
           # uncomment this `linux-builder` module, and run `darwin-rebuild switch`:
