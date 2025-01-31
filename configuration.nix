@@ -25,6 +25,7 @@
     nix-output-monitor # visualize build output by piping stderr and stdout into `nom`
     # https://github.com/nix-community/nix-index
     nix-index # search which package provides a specific file
+    nix-diff # compare nix derivations
 
     # TODO move out into a local nix development module
     ## working with local nix projects
