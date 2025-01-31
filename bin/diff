@@ -12,6 +12,6 @@ outPath=$(nix eval --raw .#darwinConfigurations.$computerName.config.system.buil
 nix run nixpkgs#nvd -- diff /run/current-system $outPath
 # shows detailed file diffs
 # currently fails https://github.com/Gabriella439/nix-diff/issues/98
-# nix-diff /run/current-system $outPath --color always
+nix-diff /run/current-system $outPath --color always
 # not sure yet what this adds
 # nix profile diff-closures --profile ~/.local/state/nix/profiles/home-manager
