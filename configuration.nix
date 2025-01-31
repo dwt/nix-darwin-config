@@ -34,6 +34,9 @@
     devenv
   ];
 
+  # This only enables you to choose the new login shell in
+  # -> SystemSettings -> Users & Groups -> Right click on users
+  # "Advanced Settings" -> Change login shell
   environment.shells = [
     pkgs.fish
   ];
