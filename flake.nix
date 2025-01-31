@@ -2,12 +2,11 @@
   description = "mkk nix-darwin system flake";
 
   inputs = {
-    # TODO consider switching to stable nixpkgs-24.11-darwin
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-24.11-darwin";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     lix-module.url = "https://git.lix.systems/lix-project/nixos-module/archive/2.92.0.tar.gz";
     lix-module.inputs.nixpkgs.follows = "nixpkgs";
-    # TODO consider switching to stable nix-darwin-24.11
-    nix-darwin.url = "github:LnL7/nix-darwin";
+    nix-darwin.url = "github:LnL7/nix-darwin/nix-darwin-24.11";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     nix-rosetta-builder.url = "github:cpick/nix-rosetta-builder";
     nix-rosetta-builder.inputs.nixpkgs.follows = "nixpkgs";
@@ -19,6 +18,7 @@
     inputs@{
       self,
       nixpkgs,
+      nixpkgs-unstable,
       lix-module,
       nix-darwin,
       nix-rosetta-builder,
