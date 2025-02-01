@@ -9,7 +9,9 @@
     ./modules/nix-linux-rosetta-builder.nix
     ./modules/enable-fish-support.nix
     ./modules/nix-development-and-debugging-support.nix
-    ./modules/nix-project-support.nix
+
+    # development workflow setup
+    ./modules/tools-and-project-suport.nix
   ];
 
   # Some finder settings
