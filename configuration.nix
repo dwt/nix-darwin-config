@@ -42,7 +42,6 @@
     ];
     extra-nix-path = "nixpkgs=flake:nixpkgs";
     trusted-users = [
-      "root"
       "dwt"
     ];
     extra-platforms = [
