@@ -14,8 +14,10 @@
     # https://github.com/maralorn/nix-output-monitor
     nix-output-monitor # visualize build output by piping stderr and stdout into `nom`
     # https://github.com/nix-community/nix-index
-    nix-index # search which package provides a specific file
+    # nix-index # search which package provides a specific file
+    # installed via nix-index-database so it auto updates it's database
     nix-diff # compare nix derivations
     nix-tree # browse installed packages
+    nh # nicer frontend for search, build + diff and garbage collection
   ];
 }

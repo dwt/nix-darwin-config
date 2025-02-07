@@ -12,6 +12,9 @@
     nix-rosetta-builder.inputs.nixpkgs.follows = "nixpkgs";
     # home-manager.url = "github:nix-community/home-manager";
     # home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    # nix-index / nix-locate but with automatic database updates
+    nix-index-database.url = "github:nix-community/nix-index-database";
+    nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
@@ -22,7 +25,8 @@
       lix-module,
       nix-darwin,
       nix-rosetta-builder,
-    # home-manager,
+      # home-manager,
+      nix-index-database,
     }:
     {
       # Build darwin flake using:
@@ -32,6 +36,7 @@
         specialArgs = { inherit inputs; };
         modules = [
           lix-module.nixosModules.default
+          nix-index-database.darwinModules.nix-index
           ./configuration.nix
 
           # {
