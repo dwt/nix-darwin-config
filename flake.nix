@@ -31,9 +31,18 @@
     {
       # Build darwin flake using:
       # $ bin/switch
-      darwinConfigurations."Sokrates" = nix-darwin.lib.darwinSystem {
+      darwinConfigurations."Sokrates" = nix-darwin.lib.darwinSystem rec {
         system = "aarch64-darwin";
-        specialArgs = { inherit inputs; };
+        specialArgs =
+          let
+            pkgs-unstable = import nixpkgs-unstable {
+              config.allowUnfree = true;
+              inherit system;
+            };
+          in
+          {
+            inherit inputs pkgs-unstable;
+          };
         modules = [
           lix-module.nixosModules.default
           nix-index-database.darwinModules.nix-index

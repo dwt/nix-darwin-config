@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ ... }:
 {
   imports = [
     # mkk specifics
@@ -13,8 +13,10 @@
 
     # development workflow setup
     ./modules/tools-and-project-suport.nix
-  ];
 
+    # gaming & entertainment
+    ./modules/gaming-and-entertainment.nix
+  ];
 
   # homebrew = {
   #   enable = true;
