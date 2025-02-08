@@ -1,0 +1,3 @@
+#!/bin/sh
+
+nix path-info --recursive /run/current-system
