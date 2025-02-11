@@ -1,5 +1,13 @@
 { ... }:
 {
+  /*
+    TODO
+    - add / update all the certificates and trust them
+    - validate / fix kerberos for chrome
+    - setup vpn
+    - enhance vpn with script that fetches kerberos ticket
+    - ensure traffic to confluence + jira goes through vpn and authenticates with kerberos to get rid of logins
+  */
   environment.etc = {
     # Enable kerberos authentication in Safari
     "krb5.conf" = {
