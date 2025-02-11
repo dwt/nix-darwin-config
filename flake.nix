@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-24.11-darwin";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nixpkgs-master.url = "github:NixOS/nixpkgs/master";
     lix-module.url = "https://git.lix.systems/lix-project/nixos-module/archive/2.92.0.tar.gz";
     lix-module.inputs.nixpkgs.follows = "nixpkgs";
     nix-darwin.url = "github:LnL7/nix-darwin/nix-darwin-24.11";
@@ -22,6 +23,7 @@
       self,
       nixpkgs,
       nixpkgs-unstable,
+      nixpkgs-master,
       lix-module,
       nix-darwin,
       nix-rosetta-builder,
@@ -39,9 +41,13 @@
               config.allowUnfree = true;
               inherit system;
             };
+            pkgs-master = import nixpkgs-master {
+              config.allowUnfree = true;
+              inherit system;
+            };
           in
           {
-            inherit inputs pkgs-unstable;
+            inherit inputs pkgs-unstable pkgs-master;
           };
         modules = [
           lix-module.nixosModules.default
