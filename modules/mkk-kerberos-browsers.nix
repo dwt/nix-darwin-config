@@ -8,6 +8,8 @@
     - enhance vpn with script that fetches kerberos ticket
     - ensure traffic to confluence + jira goes through vpn and authenticates with kerberos to get rid of logins
   */
+  # Needs a kerberos ticket
+  # kinit --keychain vbu2858@BKKVBU.LOCAL
   environment.etc = {
     # Enable kerberos authentication in Safari
     "krb5.conf" = {
