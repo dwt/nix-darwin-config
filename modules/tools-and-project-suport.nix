@@ -16,4 +16,8 @@
     # not using this for all completions, but some are much better than what is built into fish
     carapace # multi shell completion library
   ];
+
+  environment.variables = {
+    EDITOR = "mate -w";
+  };
 }
