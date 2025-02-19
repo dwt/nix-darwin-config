@@ -15,4 +15,11 @@
   environment.shells = [
     pkgs.fish
   ];
+
+  # plugins should auto activate
+  environment.systemPackages = [
+    pkgs.fishPlugins.done # notify me when long running commands finish in the background
+    # required by fishPlugins.done to post notifications
+    pkgs.terminal-notifier
+  ];
 }
