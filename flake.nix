@@ -44,10 +44,12 @@
         inherit system;
         specialArgs =
           let
+            # for the packages that are not part of the stable distribution
             pkgs-unstable = import nixpkgs-unstable {
               config.allowUnfree = true;
               inherit system;
             };
+            # for when I am working on a package and want to test / use it after it was merged
             pkgs-master = import nixpkgs-master {
               config.allowUnfree = true;
               inherit system;
