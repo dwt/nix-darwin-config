@@ -43,6 +43,7 @@
       darwinConfigurations."Sokrates" = nix-darwin.lib.darwinSystem rec {
         inherit system;
         specialArgs =
+          # TODO consider to add these into an overlay on nixpkgs, so I can access them as pkgs.unstable and pkgs.master
           let
             # for the packages that are not part of the stable distribution
             pkgs-unstable = import nixpkgs-unstable {
