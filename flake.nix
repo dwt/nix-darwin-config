@@ -32,23 +32,11 @@
     }:
     let
       system = "aarch64-darwin";
-      # REFACT consider to move out into lib?
-      # Would like to ensure that all the dependeny tools come from this flake
-      # while not cutting off access to system tools like launchctl
-      readShellScripts =
-        dir:
-        let
-          scriptFiles = nixpkgs.lib.filterAttrs (_: type: type == "regular") (builtins.readDir dir);
-          script =
-            name: nixpkgs.legacyPackages.${system}.writeShellScript name (builtins.readFile "${dir}/${name}");
-        in
-        nixpkgs.lib.mapAttrs (name: _: {
-          type = "app";
-          program = "${script name}";
-        }) scriptFiles;
+      pkgs = nixpkgs.legacyPackages.${system};
     in
     {
-      apps.${system} = readShellScripts ./bin;
+      lib = pkgs.callPackage ./lib { };
+      apps.${system} = self.lib.readShellScripts ./bin;
 
       # Build darwin flake using:
       # $ bin/switch
@@ -83,6 +71,5 @@
           # home-manager.darwinModules.home-manager
         ];
       };
-
     };
 }
