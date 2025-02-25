@@ -10,6 +10,7 @@
   */
   # Needs a kerberos ticket
   # kinit --keychain vbu2858@BKKVBU.LOCAL
+  # or Ticket-Viewer.app -> refresh 'vbu2858@BKKVBU.LOCAL' or add via "Identität Hinzufügen"
   environment.etc = {
     # Enable kerberos authentication in Safari
     "krb5.conf" = {
