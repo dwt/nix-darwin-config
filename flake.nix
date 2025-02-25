@@ -33,6 +33,8 @@
     let
       system = "aarch64-darwin";
       # REFACT consider to move out into lib?
+      # Would like to ensure that all the dependeny tools come from this flake
+      # while not cutting off access to system tools like launchctl
       readShellScripts =
         dir:
         let
