@@ -1,0 +1,3 @@
+#!/bin/sh
+
+sudo launchctl kill -2  system/org.nixos.rosetta-builderd

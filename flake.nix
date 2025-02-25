@@ -30,11 +30,27 @@
       # home-manager,
       nix-index-database,
     }:
+    let
+      system = "aarch64-darwin";
+      readShellScripts =
+        dir:
+        let
+          scriptFiles = nixpkgs.lib.filterAttrs (_: type: type == "regular") (builtins.readDir dir);
+          script =
+            name: nixpkgs.legacyPackages.${system}.writeShellScript name (builtins.readFile "${dir}/${name}");
+        in
+        nixpkgs.lib.mapAttrs (name: _: {
+          type = "app";
+          program = "${script name}";
+        }) scriptFiles;
+    in
     {
+      apps.${system} = readShellScripts ./bin;
+
       # Build darwin flake using:
       # $ bin/switch
       darwinConfigurations."Sokrates" = nix-darwin.lib.darwinSystem rec {
-        system = "aarch64-darwin";
+        inherit system;
         specialArgs =
           let
             pkgs-unstable = import nixpkgs-unstable {
@@ -64,5 +80,6 @@
           # home-manager.darwinModules.home-manager
         ];
       };
+
     };
 }
