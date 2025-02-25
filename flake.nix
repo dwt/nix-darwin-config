@@ -32,6 +32,7 @@
     }:
     let
       system = "aarch64-darwin";
+      # REFACT consider to move out into lib?
       readShellScripts =
         dir:
         let
