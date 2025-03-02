@@ -12,6 +12,8 @@
 
     # TODO add fish configuration for these
     fzf # fuzzy finder with integration into many tools
+    pstree # better ps, shows tree
+    lazygit # git TUI
     starship # cross shell prompt
     # not using this for all completions, but some are much better than what is built into fish
     carapace # multi shell completion library
