@@ -24,6 +24,10 @@
   # I want this builder to not take up ram all the time.
   # This way it auto shuts down after 3h inactivity,
   # while the delay on first launch is almost neglible with about 5-10s.
-  nix-rosetta-builder.onDemand = true;
-  nix-rosetta-builder.memory = "8GiB";
+  nix-rosetta-builder = {
+    onDemand = true;
+    onDemandLingerMinutes = 10;
+    memory = "8GiB";
+  };
+
 }
