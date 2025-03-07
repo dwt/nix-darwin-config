@@ -1,8 +1,15 @@
-{ pkgs, ... }:
+{
+  config,
+  pkgs,
+  pkgs-unstable,
+  ...
+}:
 {
 
   # Enable alternative shell support in nix-darwin.
   programs.fish.enable = true;
+  # nixpkgs-unstable is a bit behind and doesn't have fish 4 yet
+  programs.fish.package = pkgs-unstable.fish; # fish 4
   programs.fish.vendor = {
     config.enable = true;
     completions.enable = true;
@@ -13,7 +20,7 @@
   # -> SystemSettings -> Users & Groups -> Right click on users
   # "Advanced Settings" -> Change login shell
   environment.shells = [
-    pkgs.fish
+    config.programs.fish.package
   ];
 
   # plugins should auto activate
