@@ -2,7 +2,7 @@
 
 set -e
 
-nix run nix-darwin -- build --flake . "$@"
+nix run nix-darwin -- build --flake . "$@" 2>&1 | nom
 
 computerName=$(networksetup -getcomputername)
 
