@@ -12,11 +12,17 @@
 
     # TODO add fish configuration for these
     fzf # fuzzy finder with integration into many tools
-    pstree # better ps, shows tree
     lazygit # git TUI
+
+    # shell setup
     starship # cross shell prompt
     # not using this for all completions, but some are much better than what is built into fish
     carapace # multi shell completion library
+
+    # system debugging
+    pstree # better ps, shows tree
+    glances # better top
+    ncdu # show disk usage
   ];
 
   # REFACT these should quite possibly go into home manager
