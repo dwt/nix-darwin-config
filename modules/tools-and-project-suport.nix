@@ -20,7 +20,7 @@
     carapace # multi shell completion library
 
     # system debugging
-    pstree # better ps, shows tree
+    pstree # better ps, shows tree of processes
     glances # better top
     ncdu # show disk usage
   ];
