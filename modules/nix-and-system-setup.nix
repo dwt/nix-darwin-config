@@ -23,6 +23,12 @@
       "cache.lix.systems:aBnZUw8zA7H35Cz2RyKFVs3H4PlGTLawyY5KRbvJR8o="
     ];
 
+    # extra registry entries
+    # not sure how to convert these to nix-darwin config
+    # ❯ nix registry list
+    # user   flake:nixpkgs-unstable github:NixOS/nixpkgs/nixpkgs-unstable
+    # user   flake:nixpkgs-master github:NixOS/nixpkgs/master
+    # user   flake:nixpkgs-local path:/Users/dwt/Code/Projekte/nix/nixpkgs
 
     extra-nix-path = "nixpkgs=flake:nixpkgs";
     trusted-users = [
