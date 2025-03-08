@@ -10,8 +10,14 @@ outPath=$(nix eval --raw .#darwinConfigurations.$computerName.config.system.buil
 
 # shows version diffs
 nix run nixpkgs#nvd -- diff /run/current-system $outPath
+
 # shows detailed file diffs
 # currently fails https://github.com/Gabriella439/nix-diff/issues/98
-nix-diff /run/current-system $outPath --color always
-# not sure yet what this adds
-# nix profile diff-closures --profile ~/.local/state/nix/profiles/home-manager
+# not as usefull as I thought it would be, disabling for now
+#nix-diff /run/current-system $outPath --color always
+
+# if I ever want the history what changed over all profiles I kept
+# Most of the stuff this flake installs is kept in this profile
+#nix profile diff-closures --profile /nix/var/nix/profiles/system
+#nix profile diff-closures --profile /nix/var/nix/profiles/default
+#nix profile diff-closures --profile /nix/var/nix/profiles/per-user/root/profile
