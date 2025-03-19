@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, pkgs-unstable, ... }:
 {
 
   # List packages installed in system profile.
@@ -42,10 +42,13 @@
     # not using this for all completions, but some are much better than what is built into fish
     carapace # multi shell completion library
 
-    # system debugging
-    pstree # better ps, shows tree of processes
+    # system monitoring and debugging
+    pstree # shows tree of processes
     glances # better top
-    ncdu # show disk usage
+    # not in stable yet as of 2025-03-19
+    pkgs-unstable.nvtopPackages.apple # gpu utilization top
+    btop # better top with visualization
+    ncdu # find where large files are
 
     # sampler # Tool for shell commands execution, visualization and alerting
     # ttyplot # realtime plotting in terminal
