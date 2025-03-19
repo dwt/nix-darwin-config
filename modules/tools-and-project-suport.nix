@@ -23,6 +23,7 @@
     fd # find replacement
     eza # ls and tree replacement
     bat # cat with syntax highlighting and paging
+    gnupg # asymetric encryption
 
     # work with structured data
     jq # json query
@@ -50,6 +51,7 @@
     # ttyplot # realtime plotting in terminal
 
     # working with kubernetes
+    kubectl # kubernetes cli
     kubectx # switch between kubernetes contexts and namespaces
     k9s # k8s tui
     kubernetes-helm # k8s package manager
