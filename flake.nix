@@ -45,19 +45,24 @@
         specialArgs =
           # TODO consider to add these into an overlay on nixpkgs, so I can access them as pkgs.unstable and pkgs.master
           let
-            # for the packages that are not part of the stable distribution
+            # for the packages that are yet not part of the stable distribution
             pkgs-unstable = import nixpkgs-unstable {
               config.allowUnfree = true;
               inherit system;
             };
-            # for when I am working on a package and want to test / use it after it was merged
+            # for when I am working on a package and want to test / use it after it was merged, but not yet to unstable
+            # usually requires compilation, possibly of many dependencies!
             pkgs-master = import nixpkgs-master {
               config.allowUnfree = true;
               inherit system;
             };
           in
           {
-            inherit inputs pkgs-unstable pkgs-master;
+            inherit
+              inputs
+              pkgs-unstable
+              pkgs-master
+              ;
           };
         modules = [
           lix-module.nixosModules.default
