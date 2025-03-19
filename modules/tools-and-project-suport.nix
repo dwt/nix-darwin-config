@@ -9,6 +9,7 @@
     devenv # friendlier nix project configuration
 
     curlie # curl with httpie interface
+    zoxide # direct jumping to deep directories
 
     # TODO add fish configuration for these
     fzf # fuzzy finder with integration into many tools
