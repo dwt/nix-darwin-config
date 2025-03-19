@@ -7,13 +7,34 @@
   environment.systemPackages = with pkgs; [
     direnv # .envrc automatic project configuration
     devenv # friendlier nix project configuration
+    pre-commit # git hooks
 
+    # httpie # curl with a better interface
     curlie # curl with httpie interface
     zoxide # direct jumping to deep directories
+    watch # run a command every second
+    thefuck # correct previous command
+    tealdeer # tldr shows command help summaries
+    ripgrep # better grep
+    pwgen # password generator
+    pv # pipe progress viewer
+    # moreutils # pee, sponge, ts, ... and more
+    gnused # search and replace
+    fd # find replacement
+    eza # ls and tree replacement
+    bat # cat with syntax highlighting and paging
+
+    # work with structured data
+    jq # json query
+    yq-go # jq for yaml
+    jo # generate json from the shell
+    jless # structured less for yaml/json
 
     # TODO add fish configuration for these
     fzf # fuzzy finder with integration into many tools
     lazygit # git TUI
+    delta # git diff highlighter - side by side
+    difftastic # git diff highlighter - syntax aware
 
     # shell setup
     starship # cross shell prompt
@@ -24,6 +45,18 @@
     pstree # better ps, shows tree of processes
     glances # better top
     ncdu # show disk usage
+
+    # sampler # Tool for shell commands execution, visualization and alerting
+    # ttyplot # realtime plotting in terminal
+
+    # working with kubernetes
+    kubectx # switch between kubernetes contexts and namespaces
+    k9s # k8s tui
+    kubernetes-helm # k8s package manager
+    kubeseal # encrypt secrets for kubernetes
+    krew # kubectl plugin manager
+    kubeconform # manifest validator
+    kubent # check for deprecated kubernetes apis
   ];
 
   # REFACT these should quite possibly go into home manager
