@@ -48,7 +48,7 @@
     # not in stable yet as of 2025-03-19
     pkgs-unstable.nvtopPackages.apple # gpu utilization top
     btop # better top with visualization
-    ncdu # find where large files are
+    ncdu # find large files
 
     # sampler # Tool for shell commands execution, visualization and alerting
     # ttyplot # realtime plotting in terminal
