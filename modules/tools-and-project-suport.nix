@@ -1,6 +1,5 @@
 { pkgs, pkgs-unstable, ... }:
 {
-
   # List packages installed in system profile.
   # To search for new ones use https://search.nixos.org
   # To show installed tools use nix-tree
@@ -49,6 +48,7 @@
     pkgs-unstable.nvtopPackages.apple # gpu utilization top
     btop # better top with visualization
     ncdu # find large files
+    mtr # traceroute and ping combined
 
     # sampler # Tool for shell commands execution, visualization and alerting
     # ttyplot # realtime plotting in terminal
