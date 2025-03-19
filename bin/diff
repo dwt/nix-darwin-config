@@ -2,14 +2,14 @@
 
 set -e
 
-nix run nix-darwin -- build --flake . "$@" 2>&1 | nom
+darwin-rebuild build --flake . "$@" 2>&1 | nom
 
 computerName=$(networksetup -getcomputername)
 
 outPath=$(nix eval --raw .#darwinConfigurations.$computerName.config.system.build.toplevel.outPath)
 
 # shows version diffs
-nix run nixpkgs#nvd -- diff /run/current-system $outPath
+nvd -- diff /run/current-system $outPath
 
 # shows detailed file diffs
 # currently fails https://github.com/Gabriella439/nix-diff/issues/98
