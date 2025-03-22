@@ -8,6 +8,7 @@
     devenv # friendlier nix project configuration
     pre-commit # git hooks
 
+    fzf # fuzzy finder with integration into many tools
     # httpie # curl with a better interface
     curlie # curl with httpie interface
     zoxide # direct jumping to deep directories
@@ -30,8 +31,8 @@
     jo # generate json from the shell
     jless # structured less for yaml/json
 
-    # TODO add fish configuration for these
-    fzf # fuzzy finder with integration into many tools
+    # git stuff
+    git # version control
     lazygit # git TUI
     delta # git diff highlighter - side by side
     difftastic # git diff highlighter - syntax aware
