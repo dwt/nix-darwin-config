@@ -2,10 +2,12 @@
 
 set -e
 
-darwin-rebuild build --flake . "$@" 2>&1 | nom
+$(dirname $0)/diff
 
-# shows version diffs
-nvd -- diff /run/current-system result
+# shows detailed file diffs
+# currently fails https://github.com/Gabriella439/nix-diff/issues/98
+# not as usefull as I thought it would be, disabling for now
+nix-diff --color always /run/current-system result
 
 # if I ever want the history what changed over all profiles I kept
 # Most of the stuff this flake installs is kept in this profile
