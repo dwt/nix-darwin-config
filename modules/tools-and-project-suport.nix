@@ -57,7 +57,7 @@
     # working with kubernetes
     kubectl # kubernetes cli
     kubectx # switch between kubernetes contexts and namespaces
-    k9s # k8s tui
+    pkgs-unstable.k9s # k8s tui
     kubernetes-helm # k8s package manager
     kubeseal # encrypt secrets for kubernetes
     krew # kubectl plugin manager
