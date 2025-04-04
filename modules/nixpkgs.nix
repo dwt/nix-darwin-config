@@ -6,6 +6,7 @@
   ...
 }:
 {
+  # TODO contribute allowUnfreePackages to nixpkgs
   options = with lib; {
     nixpkgs.allowUnfreePackages = mkOption {
       type = with types; listOf str;
