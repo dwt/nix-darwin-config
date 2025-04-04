@@ -25,6 +25,11 @@
     bat # cat with syntax highlighting and paging
     gnupg # asymetric encryption
 
+    # linters / language servers
+    shellcheck # lint shell scripts
+    shfmt # format bash scripts
+    bash-language-server # d'oh
+
     # work with structured data
     jq # json query
     yq-go # jq for yaml
