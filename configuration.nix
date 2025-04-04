@@ -5,6 +5,7 @@
     ./modules/mkk-kerberos-browsers.nix
 
     # general system settings
+    ./modules/nixpkgs.nix
     ./modules/nix-and-system-setup.nix
     ./modules/sudo-with-biometrics.nix
     ./modules/nix-linux-rosetta-builder.nix
