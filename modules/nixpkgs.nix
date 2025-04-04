@@ -22,11 +22,11 @@
     # provide my custom nixpkgs versions
     _module.args =
       let
+        # TODO contribute mkPkgs to nixpkgs.lib
         mkPkgs =
-          customNixVersion:
-          import customNixVersion {
-            config.allowUnfreePredicate = config.nixpkgs.config.allowUnfreePredicate;
-            inherit (pkgs) system;
+          customNixpkgsVersion:
+          import customNixpkgsVersion {
+            inherit (config.nixpkgs) config system;
           };
       in
       {
