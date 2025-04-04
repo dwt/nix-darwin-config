@@ -16,7 +16,7 @@
     thefuck # correct previous command
     tealdeer # tldr shows command help summaries
     ripgrep # better grep
-    pwgen # password generator
+    pwgen # secure password generator
     pv # pipe progress viewer
     # moreutils # pee, sponge, ts, ... and more
     gnused # search and replace
