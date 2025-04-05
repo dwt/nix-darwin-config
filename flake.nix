@@ -7,7 +7,7 @@
     # nixpkgs-master.url = "github:NixOS/nixpkgs/master";
     lix-module.url = "https://git.lix.systems/lix-project/nixos-module/archive/2.92.0-2.tar.gz";
     lix-module.inputs.nixpkgs.follows = "nixpkgs";
-    nix-darwin.url = "github:LnL7/nix-darwin/nix-darwin-24.11";
+    nix-darwin.url = "github:nix-darwin/nix-darwin/nix-darwin-24.11";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     nix-rosetta-builder.url = "github:cpick/nix-rosetta-builder";
     nix-rosetta-builder.inputs.nixpkgs.follows = "nixpkgs";
