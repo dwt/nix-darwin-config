@@ -117,15 +117,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1741217962,
-        "narHash": "sha256-sA+XCllOpMUIiWYHVM8LZXKhi0EAvm6SyHPqraoL1G8=",
-        "owner": "cpick",
+        "lastModified": 1743887346,
+        "narHash": "sha256-w2qwY6s7QmJxlQfPZytVSYkTXUSSdOGB4tYoYMXRjzg=",
+        "owner": "dwt",
         "repo": "nix-rosetta-builder",
-        "rev": "afe11f64f49eadd465fedb92f11b03d9af3d16c0",
+        "rev": "a5f9f709f6c6cbb5327677fb6fb39d5446521613",
         "type": "github"
       },
       "original": {
-        "owner": "cpick",
+        "owner": "dwt",
+        "ref": "cleanup-on-disable",
         "repo": "nix-rosetta-builder",
         "type": "github"
       }
@@ -169,11 +170,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1743638030,
-        "narHash": "sha256-0MRCsNOF7vqAtVfP9LZlG2MOIp7EiFcK1LO1rQXbfiw=",
+        "lastModified": 1743813633,
+        "narHash": "sha256-BgkBz4NpV6Kg8XF7cmHDHRVGZYnKbvG0Y4p+jElwxaM=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "5051ae6744b993fcfab221e8bd38f8bc26f88393",
+        "rev": "7819a0d29d1dd2bc331bec4b327f0776359b1fa6",
         "type": "github"
       },
       "original": {
