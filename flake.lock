@@ -137,16 +137,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1743888818,
-        "narHash": "sha256-Qjj3lIHxdQnFN7bqVedX5Wj911k8qkbjF7VWdR8Ra1I=",
-        "owner": "dwt",
+        "lastModified": 1741217962,
+        "narHash": "sha256-sA+XCllOpMUIiWYHVM8LZXKhi0EAvm6SyHPqraoL1G8=",
+        "owner": "cpick",
         "repo": "nix-rosetta-builder",
-        "rev": "7d7b048eefd234bb853341c941865900f3c605f7",
+        "rev": "afe11f64f49eadd465fedb92f11b03d9af3d16c0",
         "type": "github"
       },
       "original": {
-        "owner": "dwt",
-        "ref": "cleanup-on-disable",
+        "owner": "cpick",
         "repo": "nix-rosetta-builder",
         "type": "github"
       }

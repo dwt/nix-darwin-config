@@ -2,7 +2,6 @@
   inputs,
   lib,
   config,
-  pkgs,
   ...
 }:
 {
@@ -48,6 +47,7 @@
         # usually requires compilation, possibly of many dependencies!
         # I don't want to make this too easy, which is why the input is commented out too
         # pkgs-master = mkPkgs inputs.nixpkgs-master;
+        # pkgs-local = mkPkgs inputs.nixpkgs-local;
       };
 
   };
