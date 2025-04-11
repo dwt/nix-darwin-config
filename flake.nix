@@ -16,6 +16,10 @@
     # nix-index == nix-locate but with automatic database updates
     nix-index-database.url = "github:nix-community/nix-index-database";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
+
+    # mkk specific stuff
+    mkk-vpn.url = "git+ssh://git@gitlab.com/bkkvbu/shared/openconnect-vpn-config";
+    mkk-vpn.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =

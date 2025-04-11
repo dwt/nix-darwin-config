@@ -68,6 +68,26 @@
         "url": "https://git.lix.systems/lix-project/nixos-module/archive/2.92.0-2.tar.gz"
       }
     },
+    "mkk-vpn": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1744384173,
+        "narHash": "sha256-1Vh+4jxPKNkEDe+uRhRGORIjnxA0vLm4p9YUnE+og1U=",
+        "ref": "refs/heads/main",
+        "rev": "549ba2b8ad0553b3c1b77baa654684063d11a4d1",
+        "revCount": 97,
+        "type": "git",
+        "url": "ssh://git@gitlab.com/bkkvbu/shared/openconnect-vpn-config"
+      },
+      "original": {
+        "type": "git",
+        "url": "ssh://git@gitlab.com/bkkvbu/shared/openconnect-vpn-config"
+      }
+    },
     "nix-darwin": {
       "inputs": {
         "nixpkgs": [
@@ -117,11 +137,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1743887346,
-        "narHash": "sha256-w2qwY6s7QmJxlQfPZytVSYkTXUSSdOGB4tYoYMXRjzg=",
+        "lastModified": 1743888818,
+        "narHash": "sha256-Qjj3lIHxdQnFN7bqVedX5Wj911k8qkbjF7VWdR8Ra1I=",
         "owner": "dwt",
         "repo": "nix-rosetta-builder",
-        "rev": "a5f9f709f6c6cbb5327677fb6fb39d5446521613",
+        "rev": "7d7b048eefd234bb853341c941865900f3c605f7",
         "type": "github"
       },
       "original": {
@@ -203,6 +223,7 @@
     "root": {
       "inputs": {
         "lix-module": "lix-module",
+        "mkk-vpn": "mkk-vpn",
         "nix-darwin": "nix-darwin",
         "nix-index-database": "nix-index-database",
         "nix-rosetta-builder": "nix-rosetta-builder",

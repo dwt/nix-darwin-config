@@ -3,6 +3,7 @@
   imports = [
     # mkk specifics
     ./modules/mkk-kerberos-browsers.nix
+    ./modules/mkk-vpn
 
     # general system settings
     ./modules/nixpkgs.nix

@@ -29,4 +29,5 @@
     # required by fishPlugins.done to post notifications
     pkgs.terminal-notifier
   ];
+
 }
