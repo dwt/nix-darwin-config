@@ -29,6 +29,7 @@
     shellcheck # lint shell scripts
     shfmt # format bash scripts
     bash-language-server # d'oh
+    pkgs-unstable.ruff # python linter
 
     # work with structured data
     jq # json query
