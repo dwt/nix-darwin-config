@@ -1,3 +1,6 @@
+# To clean out brew installed stuff
+# brew leaves | xargs -n1 brew deps --installed --tree
+# then bring over everything that can be installed here $ brew remove <pkg>
 { pkgs, pkgs-unstable, ... }:
 {
   # List packages installed in system profile.
@@ -24,12 +27,18 @@
     eza # ls and tree replacement
     bat # cat with syntax highlighting and paging
     gnupg # asymetric encryption
+    magic-wormhole # send files and folders securely without a server
+    sad # search and replace (sed on steroids)
 
     # linters / language servers
     shellcheck # lint shell scripts
     shfmt # format bash scripts
     bash-language-server # d'oh
     pkgs-unstable.ruff # python linter
+    ansible-lint
+    pkgs-unstable.black # python formatter
+    rubyPackages.solargraph # ruby language server
+    yamllint
 
     # work with structured data
     jq # json query
@@ -39,13 +48,16 @@
 
     # git stuff
     git # version control
+    git-lfs # large files in external storage support
     lazygit # git TUI
     delta # git diff highlighter - side by side
     difftastic # git diff highlighter - syntax aware
+    gh # github cli
 
     # shell setup
     starship # cross shell prompt
     # not using this for all completions, but some are much better than what is built into fish
+    # or fish does not have any. See for example kubectl and helm
     carapace # multi shell completion library
 
     # system monitoring and debugging
@@ -69,6 +81,9 @@
     krew # kubectl plugin manager
     kubeconform # manifest validator
     kubent # check for deprecated kubernetes apis
+
+    # Ohter clouds
+    hcloud
   ];
 
   # REFACT these should quite possibly go into home manager
