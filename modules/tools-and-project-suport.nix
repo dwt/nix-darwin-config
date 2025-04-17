@@ -39,6 +39,7 @@
     pkgs-unstable.black # python formatter
     rubyPackages.solargraph # ruby language server
     yamllint
+    pkgs-unstable.uv # faster pip
 
     # work with structured data
     jq # json query
