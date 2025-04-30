@@ -6,11 +6,6 @@
 
 # TODO
 
-* [ ] Configure Firefox to do ntml authentication
-* [ ] Automatically setup split vpn
-  * [ ] Configure Ticket-Vierer to automatically get a kerberos ticket after logging in to the vpn
-* [ ] switch to stable nixos and nix-darwin
-  * [ ] install ut1999 from unstable (GUI App!)
 * [ ] Start building out infrastructure that allows other users to join the project
   * [ ] centralized updating of dependencies `nix flake update`
   * [ ] automated regular updates to the current flake. Weekly?
