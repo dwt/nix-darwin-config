@@ -7,7 +7,7 @@
   # To search for new ones use https://search.nixos.org
   # To show installed tools use nix-tree
   environment.systemPackages = with pkgs; [
-    direnv # .envrc automatic project configuration
+    # direnv # .envrc automatic project configuration -> configured below
     pkgs-unstable.devenv # friendlier nix project configuration
     pre-commit # git hooks
 
@@ -99,5 +99,38 @@
     addresses = {
       "localhost" = "127.0.0.1";
     };
+  };
+
+  # automatic project activation from .envrc file when entering a directory
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
+    silent = true;
+    direnvrcExtra = ''
+      # layout virtualenv $venv_relative_path
+      layout_virtualenv() {
+        local venv_path="$1"
+        source ''${venv_path}/bin/activate
+        # https://github.com/direnv/direnv/wiki/PS1
+        unset PS1
+      }
+
+      # layout uv
+      layout_uv() {
+          if [[ -d ".venv" ]]; then
+              VIRTUAL_ENV="$(pwd)/.venv"
+          fi
+
+          if [[ -z $VIRTUAL_ENV || ! -d $VIRTUAL_ENV ]]; then
+              log_status "No virtual environment exists. Executing \`uv venv\` to create one."
+              uv venv
+              VIRTUAL_ENV="$(pwd)/.venv"
+          fi
+
+          PATH_add "$VIRTUAL_ENV/bin"
+          export UV_ACTIVE=1  # or VENV_ACTIVE=1
+          export VIRTUAL_ENV
+      }
+    '';
   };
 }
