@@ -45,7 +45,7 @@
 
       # Build darwin flake using:
       # $ bin/switch
-      darwinConfigurations."Sokrates" = nix-darwin.lib.darwinSystem rec {
+      darwinConfigurations."Sokrates" = nix-darwin.lib.darwinSystem {
         inherit system;
         # inputs are used for imports, so need to be passed via specialArgs to prevent infinite recursion
         specialArgs = { inherit inputs; };
