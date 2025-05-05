@@ -82,6 +82,7 @@
     krew # kubectl plugin manager
     kubeconform # manifest validator
     kubent # check for deprecated kubernetes apis
+    # korrect # automatically use the correct kubectl version for the server
 
     # Ohter clouds
     hcloud
@@ -104,8 +105,8 @@
   # automatic project activation from .envrc file when entering a directory
   programs.direnv = {
     enable = true;
-    nix-direnv.enable = true;
-    silent = true;
+    nix-direnv.enable = true; # faster flake activation times
+    # silent = true; # stop output from direnv activation
     direnvrcExtra = ''
       # layout virtualenv $venv_relative_path
       layout_virtualenv() {
