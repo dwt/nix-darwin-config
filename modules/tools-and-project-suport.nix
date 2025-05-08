@@ -54,6 +54,7 @@
     delta # git diff highlighter - side by side
     difftastic # git diff highlighter - syntax aware
     gh # github cli
+    diffuse # diff3 gui tool
 
     # shell setup
     starship # cross shell prompt
@@ -67,6 +68,7 @@
     # not in stable yet as of 2025-03-19
     pkgs-unstable.nvtopPackages.apple # gpu utilization top
     btop # better top with visualization
+    # pkgs-unstable.macpm # apple power manager information
     ncdu # find large files
     mtr # traceroute and ping combined
 
