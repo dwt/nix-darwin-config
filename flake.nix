@@ -31,7 +31,6 @@
       nixpkgs,
       lix-module,
       nix-darwin,
-      # home-manager,
       nix-index-database,
       ...
     }:
