@@ -6,7 +6,8 @@
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     # nixpkgs-master.url = "github:NixOS/nixpkgs/master";
     # nixpkgs-local.url = "/Users/dwt/Code/Projekte/nix/nixpkgs/";
-    lix-module.url = "https://git.lix.systems/lix-project/nixos-module/archive/2.92.0-2.tar.gz";
+    # lix-module.url = "https://git.lix.systems/lix-project/nixos-module/archive/2.92.0-2.tar.gz";
+    lix-module.url = "https://git.lix.systems/lix-project/nixos-module/archive/2.93.0.tar.gz";
     lix-module.inputs.nixpkgs.follows = "nixpkgs";
     nix-darwin.url = "github:nix-darwin/nix-darwin/nix-darwin-24.11";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
@@ -49,8 +50,8 @@
         # inputs are used for imports, so need to be passed via specialArgs to prevent infinite recursion
         specialArgs = { inherit inputs; };
         modules = [
-          lix-module.nixosModules.default
-          nix-index-database.darwinModules.nix-index
+          lix-module.nixosModules.default # REFACT move into nix-and-system-setup
+          nix-index-database.darwinModules.nix-index # REFACT move, but don't know yet where
           ./configuration.nix
 
           # {
