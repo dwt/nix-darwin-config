@@ -52,6 +52,17 @@
         modules = [
           lix-module.nixosModules.default # REFACT move into nix-and-system-setup
           nix-index-database.darwinModules.nix-index # REFACT move, but don't know yet where
+          # Work around nodejs compile problem
+          # https://github.com/NixOS/nixpkgs/issues/402079
+          {
+            nixpkgs.overlays = [
+              (self: super: {
+                nodejs = super.nodejs_22;
+                nodejs-slim = super.nodejs-slim_22;
+
+              })
+            ];
+          }
           ./configuration.nix
 
           # {
