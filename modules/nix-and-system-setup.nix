@@ -13,6 +13,9 @@
   nix.settings = {
     experimental-features = "nix-command flakes";
 
+    # Protect builds against accidentally pulling in dependencies from the host system
+    sandbox = true;
+
     # enable cachix and lix substitutors
     substituters = [
       "https://cache.nixos.org"
