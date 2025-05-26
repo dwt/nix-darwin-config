@@ -1,20 +1,37 @@
 { inputs, ... }:
 {
+  # system.defaults.finder is deprecated, but no alternative is available yet
+  # To keep it working, I need
+  system.primaryUser = "dwt";
+
   # Some finder settings
   system.defaults.finder = {
     AppleShowAllExtensions = true;
     FXPreferredViewStyle = "clmv";
   };
 
+  # Workaround for error "Build user group has mismatching GID"
+  ids.gids.nixbld = 30000;
+
   # Prevent warning because of https://github.com/LnL7/nix-darwin/issues/145
   nix.channel.enable = false;
+
+  # test python nixos-rebuild reimplementation
+  # might be missing becasue I'm using the darwin branch?
+  # system.rebuild.enableNg = true;
 
   # Enhance nix default setup for flakes and lix
   nix.settings = {
     experimental-features = "nix-command flakes";
 
     # Protect builds against accidentally pulling in dependencies from the host system
-    sandbox = true;
+    # sandbox = true; # failed a rust build!
+
+    # replace files with same content with hardlinks. Saves space
+    auto-optimise-store = true;
+
+    # FIXME how to set this from the configuration?
+    # log-format = "multiline-with-logs";
 
     # enable cachix and lix substitutors
     substituters = [

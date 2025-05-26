@@ -2,14 +2,13 @@
   description = "mkk nix-darwin system flake";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-24.11-darwin";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-25.05-darwin";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     # nixpkgs-master.url = "github:NixOS/nixpkgs/master";
     # nixpkgs-local.url = "/Users/dwt/Code/Projekte/nix/nixpkgs/";
-    # lix-module.url = "https://git.lix.systems/lix-project/nixos-module/archive/2.92.0-2.tar.gz";
     lix-module.url = "https://git.lix.systems/lix-project/nixos-module/archive/2.93.0.tar.gz";
     lix-module.inputs.nixpkgs.follows = "nixpkgs";
-    nix-darwin.url = "github:nix-darwin/nix-darwin/nix-darwin-24.11";
+    nix-darwin.url = "github:nix-darwin/nix-darwin/nix-darwin-25.05";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     nix-rosetta-builder.url = "github:cpick/nix-rosetta-builder";
     # when I want to test changes from me
@@ -54,15 +53,15 @@
           nix-index-database.darwinModules.nix-index # REFACT move, but don't know yet where
           # Work around nodejs compile problem
           # https://github.com/NixOS/nixpkgs/issues/402079
-          {
-            nixpkgs.overlays = [
-              (self: super: {
-                nodejs = super.nodejs_22;
-                nodejs-slim = super.nodejs-slim_22;
+          # {
+          #   nixpkgs.overlays = [
+          #     (self: super: {
+          #       nodejs = super.nodejs_22;
+          #       nodejs-slim = super.nodejs-slim_22;
 
-              })
-            ];
-          }
+          #     })
+          #   ];
+          # }
           ./configuration.nix
 
           # {

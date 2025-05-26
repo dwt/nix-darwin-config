@@ -8,6 +8,7 @@
     - enhance vpn with script that fetches kerberos ticket
     - ensure traffic to confluence + jira goes through vpn and authenticates with kerberos to get rid of logins
   */
+
   # Needs a kerberos ticket
   # kinit --keychain vbu2858@BKKVBU.LOCAL
   # or Ticket-Viewer.app -> refresh 'vbu2858@BKKVBU.LOCAL' or add via "Identität Hinzufügen"
@@ -28,6 +29,10 @@
       '';
     };
   };
+
+  # CustomUserPreferences is deprecated, but no alternative is available yet
+  # To keep it working, I need
+  system.primaryUser = "dwt";
 
   system.defaults.CustomUserPreferences = {
     # Enable kerberos authentication in Firefox
