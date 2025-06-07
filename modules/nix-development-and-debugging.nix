@@ -28,6 +28,7 @@ in
       # https://github.com/nix-community/nix-index
       # installed via nix-index-database flake so it auto updates it's database
       # nix-index # search which package provides a specific file
+      nix-search # fast `nix search` replacement
       nvd # show changed packages between two nix derivations
       nix-diff # compare nix derivations
       nix-tree # browse installed packages
