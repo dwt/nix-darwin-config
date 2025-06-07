@@ -19,6 +19,7 @@ in
       ## nix development
       # https://github.com/Mic92/nixpkgs-review
       nixpkgs-review # check pull requests for nixpkgs
+      nix-update # update nixpkgs packages
       nixfmt-rfc-style # format *.nix files
       nixd # langauge server
       nil # language server

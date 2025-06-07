@@ -1,7 +1,12 @@
 # To clean out brew installed stuff
 # brew leaves | xargs -n1 brew deps --installed --tree
 # then bring over everything that can be installed here $ brew remove <pkg>
-{ pkgs, pkgs-unstable, ... }:
+{
+  pkgs,
+  pkgs-unstable,
+  pkgs-master,
+  ...
+}:
 {
   # List packages installed in system profile.
   # To search for new ones use https://search.nixos.org
@@ -84,7 +89,7 @@
     krew # kubectl plugin manager
     kubeconform # manifest validator
     kubent # check for deprecated kubernetes apis
-    # korrect # automatically use the correct kubectl version for the server
+    pkgs-master.korrect # automatically use the correct kubectl version for the server
 
     # Ohter clouds
     hcloud
