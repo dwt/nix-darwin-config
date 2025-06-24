@@ -35,6 +35,8 @@
     magic-wormhole # send files and folders securely without a server
     sad # search and replace (sed on steroids)
 
+    # AI stuff
+    pkgs-unstable.llm # interact with llms from the command line
     # linters / language servers
     shellcheck # lint shell scripts
     shfmt # format bash scripts
