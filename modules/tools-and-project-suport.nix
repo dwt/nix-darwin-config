@@ -92,7 +92,7 @@
     krew # kubectl plugin manager
     kubeconform # manifest validator
     kubent # check for deprecated kubernetes apis
-    pkgs-master.korrect # automatically use the correct kubectl version for the server
+    pkgs-unstable.korrect # automatically use the correct kubectl version for the server
 
     # Ohter clouds
     hcloud
