@@ -37,13 +37,14 @@
 
     # AI stuff
     pkgs-unstable.llm # interact with llms from the command line
+
     # linters / language servers
     shellcheck # lint shell scripts
     shfmt # format bash scripts
     bash-language-server # d'oh
     pkgs-unstable.ruff # python linter
     ansible-lint
-    pkgs-unstable.black # python formatter
+    black # python formatter
     rubyPackages.solargraph # ruby language server
     yamllint
     pkgs-unstable.uv # faster pip
