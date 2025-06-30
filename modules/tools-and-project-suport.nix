@@ -8,6 +8,11 @@
   ...
 }:
 {
+  # fonts.packages = with pkgs; [
+  #   iosevka # terminal /programming font
+  #   nerd-fonts.iosevka # iosevka with nerd font glyphs
+  # ];
+
   # List packages installed in system profile.
   # To search for new ones use https://search.nixos.org
   # To show installed tools use nix-tree
