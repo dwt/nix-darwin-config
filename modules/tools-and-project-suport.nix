@@ -29,6 +29,7 @@
     thefuck # correct previous command
     tealdeer # tldr shows command help summaries
     ripgrep # better grep
+    ast-grep # tree sitter based search tool with intuitive syntax
     pwgen # secure password generator
     pv # pipe progress viewer
     # moreutils # pee, sponge, ts, ... and more
