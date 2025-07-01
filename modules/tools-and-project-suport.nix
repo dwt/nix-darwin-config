@@ -48,6 +48,7 @@
     shellcheck # lint shell scripts
     shfmt # format bash scripts
     bash-language-server # d'oh
+    nginx-language-server # d'oh
     pkgs-unstable.ruff # python linter
     ansible-lint
     black # python formatter
