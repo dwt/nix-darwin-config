@@ -43,6 +43,7 @@
 
     # AI stuff
     pkgs-unstable.llm # interact with llms from the command line
+    # TODO install llm-ollama, llm-lmstudio, llm-cmd, llm-github-copilot
 
     # linters / language servers
     shellcheck # lint shell scripts
@@ -103,6 +104,12 @@
 
     # Ohter clouds
     hcloud
+
+    # secret access
+    # Not yet, because GUI apps installed via nix-darwin don't fully work yet
+    # See https://github.com/nix-darwin/nix-darwin/pull/1396
+    # _1password # password manager
+    # _1password-cli # password manager
   ];
 
   # REFACT these should quite possibly go into home manager
