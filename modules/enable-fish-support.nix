@@ -7,13 +7,15 @@
 {
 
   # Enable alternative shell support in nix-darwin.
-  programs.fish.enable = true;
-  # nixpkgs-unstable is a bit behind and doesn't have fish 4 yet
-  programs.fish.package = pkgs-unstable.fish; # fish 4
-  programs.fish.vendor = {
-    config.enable = true;
-    completions.enable = true;
-    functions.enable = true;
+  programs.fish = {
+    enable = true;
+    # nixpkgs-unstable is a bit behind and doesn't have fish 4 yet
+    package = pkgs-unstable.fish; # fish 4
+    vendor = {
+      config.enable = true;
+      completions.enable = true;
+      functions.enable = true;
+    };
   };
 
   # This only enables you to choose the new login shell in
