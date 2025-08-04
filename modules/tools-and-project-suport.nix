@@ -42,8 +42,41 @@
     sad # search and replace (sed on steroids)
 
     # AI stuff
-    pkgs-unstable.llm # interact with llms from the command line
-    # TODO install llm-ollama, llm-lmstudio, llm-cmd, llm-github-copilot
+    # interact with llms from the command line
+    (pkgs-unstable.llm.withPlugins {
+      # TODO isntal llm-lmstudio (needs packaging)
+      # Use LLM to generate and execute commands in your shell <https://github.com/simonw/llm-cmd>
+      llm-cmd = true;
+
+      # AI-powered Git commands for the LLM CLI tool <https://github.com/OttoAllmendinger/llm-git>
+      # llm-git = true;
+
+      # Write and execute jq programs with the help of LLM <https://github.com/simonw/llm-jq>
+      # llm-jq = true;
+
+      # LLM fragment plugin to load a PDF as a sequence of images <https://github.com/simonw/llm-pdf-to-images>
+      # llm-pdf-to-images = true;
+
+      # LLM plugin for embeddings using sentence-transformers <https://github.com/simonw/llm-sentence-transformers>
+      # llm-sentence-transformers = true;
+
+      # Load LLM templates from GitHub repositories <https://github.com/simonw/llm-templates-github>
+      # llm-templates-github = true;
+
+      # LLM tools for running queries against SQLite <https://github.com/simonw/llm-tools-sqlite>
+      # llm-tools-sqlite = true;
+
+      # JavaScript execution as a tool for LLM <https://github.com/simonw/llm-tools-quickjs>
+      # llm-tools-quickjs = true;
+
+      # LLM plugin providing access to GitHub Copilot <https://github.com/jmdaly/llm-github-copilot>
+      # always requests the model list for every command. Not sure I want that.
+      # llm-github-copilot = true;
+
+      # LLM plugin providing access to Ollama models using HTTP API <https://github.com/taketwo/llm-ollama>
+      # always requests the model list for every command. Not sure I want that.
+      # llm-ollama = true;
+    })
 
     # linters / language servers
     shellcheck # lint shell scripts
