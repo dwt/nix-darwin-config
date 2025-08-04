@@ -21,7 +21,7 @@ in
       nixpkgs-review # check pull requests for nixpkgs
       nix-update # update nixpkgs packages
       nixfmt-rfc-style # format *.nix files
-      nixd # langauge server
+      nixd # language server
       nil # language server
       # https://github.com/maralorn/nix-output-monitor
       nix-output-monitor # visualize build output by piping stderr and stdout into `nom`
