@@ -20,7 +20,7 @@
     channel.enable = false;
 
     # test python nixos-rebuild reimplementation
-    # might be missing becasue I'm using the darwin branch?
+    # might be missing because I'm using the darwin branch?
     # system.rebuild.enableNg = true;
 
     # Enhance nix default setup for flakes and lix
