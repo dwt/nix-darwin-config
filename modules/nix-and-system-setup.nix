@@ -25,7 +25,7 @@
 
     # Enhance nix default setup for flakes and lix
     settings = {
-      experimental-features = "nix-command flakes";
+      experimental-features = "nix-command flakes lix-custom-sub-commands pipe-operator";
 
       # Protect builds against accidentally pulling in dependencies from the host system
       # sandbox = true; # failed a rust build!
