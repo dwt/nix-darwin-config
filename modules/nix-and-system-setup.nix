@@ -23,6 +23,17 @@
     # might be missing because I'm using the darwin branch?
     # system.rebuild.enableNg = true;
 
+    # extra registry entries
+    registry = {
+      nixpkgs-unstable.flake = inputs.nixpkgs-unstable;
+      # I do not want to lock down master to the version built with this flake
+      # as master is supposed to point to the latest and greatest
+      nixpkgs-master.to = builtins.parseFlakeRef "github:NixOS/nixpkgs/master";
+      # I don't want to point to a local path, until I find a better way, it stays like this
+      # Consider: could I point to my github mirror? But I want to use it to point to things in development. :(
+      # user   flake:nixpkgs-local path:/Users/dwt/Code/Projekte/nix/nixpkgs
+    };
+
     # Enhance nix default setup for flakes and lix
     settings = {
       experimental-features = "nix-command flakes lix-custom-sub-commands pipe-operator";
@@ -45,13 +56,6 @@
         "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
         "cache.lix.systems:aBnZUw8zA7H35Cz2RyKFVs3H4PlGTLawyY5KRbvJR8o="
       ];
-
-      # extra registry entries
-      # not sure how to convert these to nix-darwin config
-      # ❯ nix registry list
-      # user   flake:nixpkgs-unstable github:NixOS/nixpkgs/nixpkgs-unstable
-      # user   flake:nixpkgs-master github:NixOS/nixpkgs/master
-      # user   flake:nixpkgs-local path:/Users/dwt/Code/Projekte/nix/nixpkgs
 
       extra-nix-path = "nixpkgs=flake:nixpkgs";
       trusted-users = [
