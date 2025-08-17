@@ -39,7 +39,8 @@
       experimental-features = "nix-command flakes lix-custom-sub-commands pipe-operator";
 
       # Protect builds against accidentally pulling in dependencies from the host system
-      # sandbox = true; # failed a rust build!
+      sandbox = true;
+      # failed a rust build! Similar to https://github.com/NixOS/nixpkgs/pull/431236#issuecomment-3193377295
 
       # replace files with same content with hardlinks. Saves space
       auto-optimise-store = true;
