@@ -13,7 +13,7 @@
     nix-rosetta-builder.url = "github:cpick/nix-rosetta-builder";
     # when I want to test changes from me
     # nix-rosetta-builder.url = "github:dwt/nix-rosetta-builder/cleanup-on-disable";
-    nix-rosetta-builder.inputs.nixpkgs.follows = "nixpkgs";
+    nix-rosetta-builder.inputs.nixpkgs.follows = "nixpkgs-unstable";
     # home-manager.url = "github:nix-community/home-manager";
     # home-manager.inputs.nixpkgs.follows = "nixpkgs";
     # nix-index == nix-locate but with automatic database updates
