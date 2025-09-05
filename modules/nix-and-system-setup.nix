@@ -15,8 +15,8 @@
   # Workaround for error "Build user group has mismatching GID"
   ids.gids.nixbld = 30000;
 
-  # Prevent warning because of https://github.com/LnL7/nix-darwin/issues/145
   nix = {
+    # Prevent warning because of https://github.com/nix-darwin/nix-darwin/issues/145
     channel.enable = false;
 
     # test python nixos-rebuild reimplementation
