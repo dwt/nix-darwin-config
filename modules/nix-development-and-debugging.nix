@@ -18,7 +18,7 @@ in
       # TODO move these out into their own module
       ## nix development
       # https://github.com/Mic92/nixpkgs-review
-      nixpkgs-review # check pull requests for nixpkgs
+      #nixpkgs-review # check pull requests for nixpkgs -> moved to lix module as it needs to be patched to use lix natively
       nix-update # update nixpkgs packages
       nixfmt-rfc-style # format *.nix files
       nixd # language server

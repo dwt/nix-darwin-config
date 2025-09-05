@@ -27,6 +27,7 @@
     optimise.automatic = true;
     # automatically prune no longer needed nix packages
     gc.automatic = true;
+
     # extra registry entries
     registry = {
       nixpkgs-unstable.flake = inputs.nixpkgs-unstable;
@@ -40,25 +41,19 @@
 
     # Enhance nix default setup for flakes and lix
     settings = {
-      experimental-features = "nix-command flakes lix-custom-sub-commands pipe-operator";
+      experimental-features = [
+        "nix-command"
+        "flakes"
+        "pipe-operator"
+      ];
 
       # Protect builds against accidentally pulling in dependencies from the host system
-      sandbox = true;
       # failed a rust build! Similar to https://github.com/NixOS/nixpkgs/pull/431236#issuecomment-3193377295
-
+      sandbox = true;
+      # disable temporarily with `--option sandbox false`
 
       # FIXME how to set this from the configuration?
       # log-format = "multiline-with-logs";
-
-      # enable cachix and lix substitutors
-      substituters = [
-        "https://cache.nixos.org"
-        "https://cache.lix.systems"
-      ];
-      trusted-public-keys = [
-        "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
-        "cache.lix.systems:aBnZUw8zA7H35Cz2RyKFVs3H4PlGTLawyY5KRbvJR8o="
-      ];
 
       extra-nix-path = "nixpkgs=flake:nixpkgs";
       trusted-users = [

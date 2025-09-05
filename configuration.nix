@@ -6,6 +6,7 @@
     ./modules/mkk-vpn
 
     # general system settings
+    ./modules/lix.nix
     ./modules/nixpkgs.nix
     ./modules/nix-and-system-setup.nix
     ./modules/sudo-with-biometrics.nix
