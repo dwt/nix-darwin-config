@@ -46,7 +46,7 @@
         # for when I am working on a package and want to test / use it after it was merged, but not yet to unstable
         # usually requires compilation, possibly of many dependencies!
         # I don't want to make this too easy, which is why the input is commented out too
-        pkgs-master = mkPkgs inputs.nixpkgs-master;
+        # pkgs-master = mkPkgs inputs.nixpkgs-master;
         # pkgs-local = mkPkgs inputs.nixpkgs-local;
       };
 

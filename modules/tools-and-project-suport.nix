@@ -4,7 +4,6 @@
 {
   pkgs,
   pkgs-unstable,
-  pkgs-master,
   ...
 }:
 {
