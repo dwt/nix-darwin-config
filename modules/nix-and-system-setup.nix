@@ -23,6 +23,10 @@
     # might be missing because I'm using the darwin branch?
     # system.rebuild.enableNg = true;
 
+    # hard links identical files to each other
+    optimise.automatic = true;
+    # automatically prune no longer needed nix packages
+    gc.automatic = true;
     # extra registry entries
     registry = {
       nixpkgs-unstable.flake = inputs.nixpkgs-unstable;
@@ -42,8 +46,6 @@
       sandbox = true;
       # failed a rust build! Similar to https://github.com/NixOS/nixpkgs/pull/431236#issuecomment-3193377295
 
-      # replace files with same content with hardlinks. Saves space
-      auto-optimise-store = true;
 
       # FIXME how to set this from the configuration?
       # log-format = "multiline-with-logs";
@@ -68,8 +70,6 @@
       ];
     };
 
-    # automatically prune no longer needed nix packages
-    gc.automatic = true;
   };
 
   # Set Git commit hash for darwin-version.
