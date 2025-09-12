@@ -127,7 +127,16 @@
     kubectl # kubernetes cli
     kubectx # switch between kubernetes contexts and namespaces
     pkgs-unstable.k9s # k8s tui
-    kubernetes-helm # k8s package manager
+    (pkgs-unstable.wrapHelm pkgs-unstable.kubernetes-helm {
+      # k8s package manager
+      plugins = with pkgs-unstable.kubernetes-helmPlugins; [
+        helm-diff # show what would actually change on the server before applying a helm chart
+        helm-mapkubeapis # show usage of deprecated or removed k8s apis in helm charts
+        # for later
+        # helm-secrets # use sops to manage secrets in helm charts
+      ];
+    })
+
     kubeseal # encrypt secrets for kubernetes
     krew # kubectl plugin manager
     kubeconform # manifest validator
