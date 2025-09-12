@@ -98,7 +98,7 @@
     # git stuff
     git # version control
     git-lfs # large files in external storage support
-    lazygit # git TUI
+    pkgs-unstable.lazygit # git TUI
     delta # git diff highlighter - side by side
     difftastic # git diff highlighter - syntax aware
     gh # github cli
