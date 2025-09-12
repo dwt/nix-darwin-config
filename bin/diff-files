@@ -8,6 +8,8 @@ $(dirname $0)/diff
 # currently fails https://github.com/Gabriella439/nix-diff/issues/98
 # not as usefull as I thought it would be, disabling for now
 nix-diff --color always /run/current-system result
+# Try out https://github.com/Mic92/nix-diff-rs/blob/main/flake.nix as a nix-diff alternative
+nix run github:Mic92/nix-diff-rs -- /run/current-system result
 
 # if I ever want the history what changed over all profiles I kept
 # Most of the stuff this flake installs is kept in this profile
