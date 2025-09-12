@@ -11,6 +11,8 @@
   ];
   programs.direnv.nix-direnv.package = pkgs-unstable.lixPackageSets.stable.nix-direnv;
 
+  # I really want to find a way to include all packages that need overrides automatically, and this is not it.
+  # https://git.lix.systems/lix-project/lix/issues/989
   # nixpkgs.overlays = [
   #   (final: prev: {
   #     lix = pkgs-unstable.lixPackageSets.stable.lix;
