@@ -7,7 +7,9 @@
   #pkgs.lixPackageSets = pkgs-unstable.lixPackageSets;
 
   environment.systemPackages = with pkgs-unstable.lixPackageSets.stable; [
-    nixpkgs-review
+    # https://github.com/Mic92/nixpkgs-review
+    nixpkgs-review # check pull requests for nixpkgs -> moved to lix module as it needs to be patched to use lix natively
+    # nix-update # update nixpkgs packages
   ];
   programs.direnv.nix-direnv.package = pkgs-unstable.lixPackageSets.stable.nix-direnv;
 
