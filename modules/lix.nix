@@ -1,5 +1,10 @@
 { pkgs, pkgs-unstable, ... }:
 {
+  # Enhance nix default setup for flakes and lix
+  nix.settings.experimental-features = [
+    "lix-custom-sub-commands"
+  ];
+
   # https://lix.systems/add-to-config/#advanced-change
   # see there for advanced nix -> lix overrides of custom packages
   # also supports: stable, latest, git
@@ -28,10 +33,4 @@
   #       ;
   #   })
   # ];
-
-  # Enhance nix default setup for flakes and lix
-  nix.settings.experimental-features = [
-    "lix-custom-sub-commands"
-  ];
-
 }
