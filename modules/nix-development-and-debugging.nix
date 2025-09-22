@@ -32,6 +32,7 @@ in
       nh # nicer frontend for search, build + diff and garbage collection $ nh search hello
       hydra-check # check build status of packages in hydra $ hydra-check hello --arch x86_64-darwin
       nix-init # create initial nix package from project url
+      nurl # get the fetcher call with all arguments for a given url. Supports almost all fetchers.
     ];
   };
 }
