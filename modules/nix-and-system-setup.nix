@@ -49,7 +49,8 @@
 
       # Protect builds against accidentally pulling in dependencies from the host system
       # failed a rust build! Similar to https://github.com/NixOS/nixpkgs/pull/431236#issuecomment-3193377295
-      sandbox = true;
+      # Some packages (especially qt5 based) need the relaxed sandbox to access icu files
+      sandbox = "relaxed";
       # disable temporarily with `--option sandbox false`
 
       # FIXME how to set this from the configuration?
