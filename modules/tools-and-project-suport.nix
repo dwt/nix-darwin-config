@@ -17,7 +17,7 @@
   # To show installed tools use nix-tree
   environment.systemPackages = with pkgs; [
     # direnv # .envrc automatic project configuration -> configured below
-    devenv # friendlier nix project configuration
+    pkgs-unstable.devenv # friendlier nix project configuration
     pre-commit # git hooks
 
     fzf # fuzzy finder with integration into many tools
