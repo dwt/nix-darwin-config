@@ -13,7 +13,7 @@
 
     # Games
     # Doesn't like the lix build sandbox right now. :-(
-    # pkgs-unstable.ut1999 # The original Unreal Tournament
+    pkgs-unstable.ut1999 # The original Unreal Tournament
     # mumble doesn't like the sandbox either right now :-(
     pkgs-unstable.quake3arena-hires # The original deathmatch game
   ];
