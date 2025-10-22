@@ -39,6 +39,7 @@
     gnupg # asymetric encryption
     magic-wormhole # send files and folders securely without a server
     sad # search and replace (sed on steroids)
+    helix # terminal based text editor with full tree sitter and lsp support
 
     # AI stuff
     # interact with llms from the command line
@@ -143,7 +144,7 @@
     kubent # check for deprecated kubernetes apis
     pkgs-unstable.korrect # automatically use the correct kubectl version for the server
 
-    # Ohter clouds
+    # Other clouds
     hcloud
 
     # secret access
