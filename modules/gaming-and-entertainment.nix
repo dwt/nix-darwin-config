@@ -8,7 +8,7 @@
   environment.systemPackages = [
     # Tools and fun stuff
     pkgs.yt-dlp # Download movies / audio from almost all websites
-    pkgs.ffmpeg # Video and audio converter and all around swiss army knife
+    pkgs.ffmpeg # Video and audio converter and all around swiss army knife, required for yt-dlp to extract audio
     pkgs.fortune # Show a random quote on login
 
     # Games
