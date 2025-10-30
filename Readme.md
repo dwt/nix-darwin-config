@@ -6,8 +6,5 @@
 
 # TODO
 
-* [ ] Start building out infrastructure that allows other users to join the project
-  * [ ] centralized updating of dependencies `nix flake update`
-  * [ ] automated regular updates to the current flake. Weekly?
-  * [ ] more basic setup like full disk encryption
-  * [ ] ensure that it works for bash/zsh users!
+* [ ] Start managing homebrew
+* [ ] Find a way to get automatic security updates for nix packages going
