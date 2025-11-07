@@ -2,13 +2,14 @@
   description = "mkk nix-darwin system flake";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-25.05-darwin";
+    # nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-25.05-darwin";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     # nixpkgs-unstable.url = "github:NixOS/nixpkgs/pull/445223/head";
     # nixpkgs-master.url = "github:NixOS/nixpkgs/master";
     # nixpkgs-local.url = "/Users/dwt/Code/Projekte/nix/nixpkgs/";
-    nix-darwin.url = "github:nix-darwin/nix-darwin/nix-darwin-25.05";
-    # nix-darwin.url = "github:nix-darwin/nix-darwin/master";
+    # nix-darwin.url = "github:nix-darwin/nix-darwin/nix-darwin-25.05";
+    nix-darwin.url = "github:nix-darwin/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     nix-rosetta-builder.url = "github:cpick/nix-rosetta-builder";
     # when I want to test changes from me

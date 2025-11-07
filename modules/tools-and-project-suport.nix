@@ -25,7 +25,7 @@
     curlie # curl with httpie interface
     zoxide # direct jumping to deep directories
     watch # run a command every second
-    thefuck # correct previous command
+    pay-respects # correct previous command - successor to thefuck
     tealdeer # tldr shows command help summaries
     ripgrep # better grep
     ast-grep # tree sitter based search tool with intuitive syntax
