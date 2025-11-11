@@ -1,7 +1,11 @@
-{ inputs, pkgs, ... }:
+{
+  inputs,
+  pkgs,
+  ...
+}:
 {
   environment.systemPackages = [
-    (inputs.mkk-vpn.packages.${pkgs.system}.default.overrideAttrs {
+    (inputs.mkk-vpn.packages.${pkgs.stdenv.hostPlatform.system}.default.overrideAttrs {
       dotenv = ./.env;
     })
   ];
