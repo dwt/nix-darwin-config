@@ -6,5 +6,6 @@
 
 # TODO
 
-* [ ] Start managing homebrew
 * [ ] Find a way to get automatic security updates for nix packages going
+* [ ] Start managing homebrew
+* [ ] Start managing ~/.config for shell tools. See @afh's repo for inspiration:
