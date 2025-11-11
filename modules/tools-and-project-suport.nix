@@ -151,6 +151,10 @@
     # Other clouds
     hcloud
 
+    # essential python tooling
+    python314 # interpreter
+    # jupyterlab # notebook server
+
     # secret access
     # Not yet, because GUI apps installed via nix-darwin don't fully work yet
     # See https://github.com/nix-darwin/nix-darwin/pull/1396
