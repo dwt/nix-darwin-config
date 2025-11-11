@@ -89,6 +89,7 @@
     rubyPackages.solargraph # ruby language server
     yamllint
     pkgs-unstable.uv # faster pip
+    detect-secrets
 
     # work with structured data
     jq # json query
@@ -104,6 +105,7 @@
     difftastic # git diff highlighter - syntax aware
     gh # github cli
     diffuse # diff3 gui tool
+    python313Packages.nbdime # diff and merge for jupyter notebooks
 
     # shell setup
     starship # cross shell prompt
@@ -120,6 +122,8 @@
     # pkgs-unstable.macpm # apple power manager information
     ncdu # find large files
     mtr # traceroute and ping combined
+    tailspin # log file highlighter
+    lnav # log file analyzer
 
     # sampler # Tool for shell commands execution, visualization and alerting
     # ttyplot # realtime plotting in terminal
