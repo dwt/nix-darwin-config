@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo "When this hangs at the end, then probably because sudo waits for input."
+echo "When this hangs, then probably because sudo waits for input."
 echo "Try calling this from a real terminal"
-# or if all else fails, just run the command without the redirect directly in the terminal
+echo or if all else fails, just run the command without the redirect directly in the terminal
 sudo darwin-rebuild switch --flake . 2>&1 | nom
