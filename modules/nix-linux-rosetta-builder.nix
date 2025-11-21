@@ -1,5 +1,6 @@
 {
   inputs,
+  lib,
   ...
 }:
 {
@@ -30,6 +31,11 @@
     onDemand = true;
     onDemandLingerMinutes = 10;
     memory = "8GiB";
+    # Workaround for https://github.com/NixOS/nixpkgs/issues/461884
+    # Obsoleted by https://github.com/NixOS/nixpkgs/pull/463106
+    potentiallyInsecureExtraNixosModule = {
+      boot.binfmt.registrations.rosetta.preserveArgvZero = lib.mkForce true;
+    };
   };
 
 }
