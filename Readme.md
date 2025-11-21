@@ -7,5 +7,6 @@
 # TODO
 
 * [ ] Find a way to get automatic security updates for nix packages going
+  * `nix flake update nixpkgs nixpkgs-unstable; bin/diff; bin/switch` on a schedule?
 * [ ] Start managing homebrew
 * [ ] Start managing ~/.config for shell tools. See @afh's repo for inspiration:
