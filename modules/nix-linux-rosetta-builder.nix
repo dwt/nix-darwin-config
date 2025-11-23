@@ -1,6 +1,7 @@
 {
   inputs,
   lib,
+  pkgs-unstable,
   ...
 }:
 {
@@ -35,6 +36,9 @@
     # Obsoleted by https://github.com/NixOS/nixpkgs/pull/463106
     potentiallyInsecureExtraNixosModule = {
       boot.binfmt.registrations.rosetta.preserveArgvZero = lib.mkForce true;
+      environment.systemPackages = with pkgs-unstable; [
+        btop
+      ];
     };
   };
 
