@@ -96,6 +96,8 @@
     yq-go # jq for yaml
     jo # generate json from the shell
     jless # structured less for yaml/json
+    timg # display images in terminal
+    viu # display images in terminal
 
     # git stuff
     git # version control
