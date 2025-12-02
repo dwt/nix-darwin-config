@@ -27,6 +27,10 @@
     optimise.automatic = true;
     # automatically prune no longer needed nix packages
     gc.automatic = true;
+    # TODO look at angrr to remove direnv created gc-roots of projects no longer used
+    # https://github.com/linyinfeng/angrr
+    # TODO look at nh garbage collection for better control what gets collected
+    # https://github.com/nix-community/nh
 
     # extra registry entries
     registry = {
