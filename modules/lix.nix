@@ -1,6 +1,7 @@
-{ pkgs, pkgs-unstable, ... }:
+{ pkgs, ... }:
 let
-  lix = pkgs.lixPackageSets.latest.lix;
+  packageSet = pkgs.lixPackageSets.latest;
+  lix = packageSet.lix;
 in
 {
   # Enhance nix default setup for flakes and lix
@@ -13,15 +14,16 @@ in
   # also supports: stable, latest, git
   nix.package = lix;
 
-  environment.systemPackages = with pkgs.lixPackageSets.latest; [
+  environment.systemPackages = with packageSet; [
     # https://github.com/Mic92/nixpkgs-review
     nixpkgs-review # check pull requests for nixpkgs -> moved to lix module as it needs to be patched to use lix natively
+    # TODO pull request nixpkgs
     (pkgs.nix-init.override {
       nix = lix;
     }) # create initial nix package from project url
     # nix-update # update nixpkgs packages
   ];
-  programs.direnv.nix-direnv.package = pkgs.lixPackageSets.latest.nix-direnv;
+  programs.direnv.nix-direnv.package = packageSet.nix-direnv;
 
   # I really want to find a way to include all packages that need overrides automatically, and this is not it.
   # https://git.lix.systems/lix-project/lix/issues/989
