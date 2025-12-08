@@ -91,6 +91,7 @@
     rubyPackages.solargraph # ruby language server
     yamllint
     detect-secrets # pre-commit hook to check for secrets about to be committed
+    gitlab-ci-ls # gitlab ci files language server
 
     # work with structured data
     jq # json query
@@ -99,6 +100,7 @@
     jless # structured less for yaml/json
     timg # display images in terminal
     viu # display images in terminal
+    pup # parse html from the command line
 
     # git stuff
     git # version control
