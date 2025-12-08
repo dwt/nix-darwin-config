@@ -19,12 +19,14 @@
     # direnv # .envrc automatic project configuration -> configured below
     pkgs-unstable.devenv # friendlier nix project configuration
     pre-commit # git hooks
+    pkgs-unstable.uv # faster pip
 
     fzf # fuzzy finder with integration into many tools
     # httpie # curl with a better interface
     curlie # curl with httpie interface
     zoxide # direct jumping to deep directories
     watch # run a command every second
+    # FIXME collides with nix package lookup!
     pay-respects # correct previous command - successor to thefuck
     tealdeer # tldr shows command help summaries
     ripgrep # better grep
@@ -88,8 +90,7 @@
     black # python formatter
     rubyPackages.solargraph # ruby language server
     yamllint
-    pkgs-unstable.uv # faster pip
-    detect-secrets
+    detect-secrets # pre-commit hook to check for secrets about to be committed
 
     # work with structured data
     jq # json query
@@ -134,6 +135,11 @@
     kubectl # kubernetes cli
     kubectx # switch between kubernetes contexts and namespaces
     pkgs-unstable.k9s # k8s tui
+    kubeseal # encrypt secrets for kubernetes
+    krew # kubectl plugin manager
+    kubeconform # manifest validator
+    kubent # check for deprecated kubernetes apis
+    pkgs-unstable.korrect # automatically use the correct kubectl version for the server
     (pkgs-unstable.wrapHelm pkgs-unstable.kubernetes-helm {
       # k8s package manager
       plugins = with pkgs-unstable.kubernetes-helmPlugins; [
@@ -143,12 +149,6 @@
         # helm-secrets # use sops to manage secrets in helm charts
       ];
     })
-
-    kubeseal # encrypt secrets for kubernetes
-    krew # kubectl plugin manager
-    kubeconform # manifest validator
-    kubent # check for deprecated kubernetes apis
-    pkgs-unstable.korrect # automatically use the correct kubectl version for the server
 
     # Other clouds
     hcloud
