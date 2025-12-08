@@ -16,8 +16,9 @@ in
 
   environment.systemPackages = with packageSet; [
     # https://github.com/Mic92/nixpkgs-review
-    nixpkgs-review # check pull requests for nixpkgs -> moved to lix module as it needs to be patched to use lix natively
-    # TODO pull request nixpkgs
+    nixpkgs-review # check pull requests for nixpkgs
+    # nix-review still warns about unknown config options -> still using the wrong nix?
+    # Obsoleted by https://github.com/NixOS/nixpkgs/pull/466954
     (pkgs.nix-init.override {
       nix = lix;
     }) # create initial nix package from project url
