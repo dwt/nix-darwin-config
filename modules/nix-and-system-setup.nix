@@ -1,4 +1,10 @@
-{ inputs, ... }:
+{
+  inputs,
+  lib,
+  pkgs,
+  config,
+  ...
+}:
 {
   # system.defaults.finder is deprecated, but no alternative is available yet
   # To keep it working, I need
@@ -24,9 +30,9 @@
     # system.rebuild.enableNg = true;
 
     # hard links identical files to each other
-    optimise.automatic = true;
+    # optimise.automatic = true; # now handled by nh below
     # automatically prune no longer needed nix packages
-    gc.automatic = true;
+    # gc.automatic = true; # now handled by nh below
     # TODO look at angrr to remove direnv created gc-roots of projects no longer used
     # https://github.com/linyinfeng/angrr
     # TODO look at nh garbage collection for better control what gets collected
@@ -70,6 +76,30 @@
       ];
     };
 
+  };
+
+  # Better garbage collection of nix store and gc-roots than nix.gc.automatic
+  environment.systemPackages = [
+    pkgs.nh # can replace `nix store gc` and also clean direnv created gc-roots
+  ];
+
+  # This works with a feature of nix-direnv that automatically touches used direnv-gc-roots on environment activation
+  launchd.daemons.nh-nix-garbage-collector = {
+    command = "${lib.getExe pkgs.nh} clean all --keep 5 --keep-since 2w --verbose --optimise";
+    path = [ config.nix.package ];
+    serviceConfig = {
+      LowPriorityIO = true;
+      LowPriorityBackgroundIO = true;
+      ProcessType = "Background";
+      StandardOutPath = "/var/log/nh-gc.log";
+      StandardErrorPath = "/var/log/nh-gc-error.log";
+      StartInterval =
+        let
+          weekly = 7 * 24 * 60 * 60;
+        in
+        weekly;
+      WorkingDirectory = "/var/root";
+    };
   };
 
   # Set Git commit hash for darwin-version.
