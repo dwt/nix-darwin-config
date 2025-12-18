@@ -6,6 +6,7 @@ darwin-rebuild build --flake . "$@" 2>&1 | nom
 
 # shows version diffs
 nvd -- diff /run/current-system result
+# TODO investigate dix for diffing speed https://github.com/faukah/dix
 
 # if I ever want the history what changed over all profiles I kept
 # Most of the stuff this flake installs is kept in this profile
