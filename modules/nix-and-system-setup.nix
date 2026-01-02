@@ -78,6 +78,10 @@
 
   };
 
+  # TODO upstream nix-darwin
+  # Already two pull reqeuests
+  # - https://github.com/nix-darwin/nix-darwin/pull/942
+  # - https://github.com/nix-darwin/nix-darwin/pull/1547
   # Better garbage collection of nix store and gc-roots than nix.gc.automatic
   environment.systemPackages = [
     pkgs.nh # can replace `nix store gc` and also clean direnv created gc-roots
