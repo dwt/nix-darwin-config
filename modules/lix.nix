@@ -16,13 +16,15 @@ in
 
   environment.systemPackages = with packageSet; [
     # https://github.com/Mic92/nixpkgs-review
+    # TODO use nixpkgs-reviewFull, though needs
+    # https://github.com/NixOS/nixpkgs/pull/475129
     nixpkgs-review # check pull requests for nixpkgs
     # nix-review still warns about unknown config options -> still using the wrong nix?
     # Obsoleted by https://github.com/NixOS/nixpkgs/pull/466954
     (pkgs.nix-init.override {
       nix = lix;
     }) # create initial nix package from project url
-    # nix-update # update nixpkgs packages
+    nix-update # update nixpkgs packages
   ];
   programs.direnv.nix-direnv.package = packageSet.nix-direnv;
 
