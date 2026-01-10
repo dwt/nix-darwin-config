@@ -3,7 +3,6 @@
 # then bring over everything that can be installed here $ brew remove <pkg>
 {
   pkgs,
-  pkgs-unstable,
   ...
 }:
 {
@@ -17,9 +16,9 @@
   # To show installed tools use nix-tree
   environment.systemPackages = with pkgs; [
     # direnv # .envrc automatic project configuration -> configured below
-    pkgs-unstable.devenv # friendlier nix project configuration
+    devenv # friendlier nix project configuration
     pre-commit # git hooks
-    pkgs-unstable.uv # faster pip
+    uv # faster pip
 
     fzf # fuzzy finder with integration into many tools
     # httpie # curl with a better interface
@@ -41,12 +40,12 @@
     gnupg # asymetric encryption
     magic-wormhole # send files and folders securely without a server
     sad # search and replace (sed on steroids)
-    helix # terminal based text editor with full tree sitter and lsp support
+    fresh-editor # terminal based text editor with full tree sitter and lsp support
 
     # AI stuff
     # interact with llms from the command line
-    (pkgs-unstable.llm.withPlugins {
-      # TODO isntal llm-lmstudio (needs packaging)
+    (llm.withPlugins {
+      # TODO install llm-lmstudio (needs packaging)
       # Use LLM to generate and execute commands in your shell <https://github.com/simonw/llm-cmd>
       llm-cmd = true;
 
@@ -85,7 +84,7 @@
     shfmt # format bash scripts
     bash-language-server # d'oh
     nginx-language-server # d'oh
-    pkgs-unstable.ruff # python linter
+    ruff # python linter
     ansible-lint
     black # python formatter
     rubyPackages.solargraph # ruby language server
@@ -105,7 +104,7 @@
     # git stuff
     git # version control
     git-lfs # large files in external storage support
-    pkgs-unstable.lazygit # git TUI
+    lazygit # git TUI
     delta # git diff highlighter - side by side
     difftastic # git diff highlighter - syntax aware
     gh # github cli
@@ -122,9 +121,9 @@
     pstree # shows tree of processes
     glances # better top
     # not in stable yet as of 2025-03-19
-    pkgs-unstable.nvtopPackages.apple # gpu utilization top
+    nvtopPackages.apple # gpu utilization top
     btop # better top with visualization
-    # pkgs-unstable.macpm # apple power manager information
+    # macpm # apple power manager information
     ncdu # find large files
     mtr # traceroute and ping combined
     tailspin # log file highlighter
@@ -136,15 +135,15 @@
     # working with kubernetes
     kubectl # kubernetes cli
     kubectx # switch between kubernetes contexts and namespaces
-    pkgs-unstable.k9s # k8s tui
+    k9s # k8s tui
     kubeseal # encrypt secrets for kubernetes
     krew # kubectl plugin manager
     kubeconform # manifest validator
     kubent # check for deprecated kubernetes apis
-    pkgs-unstable.korrect # automatically use the correct kubectl version for the server
-    (pkgs-unstable.wrapHelm pkgs-unstable.kubernetes-helm {
+    korrect # automatically use the correct kubectl version for the server
+    (wrapHelm kubernetes-helm {
       # k8s package manager
-      plugins = with pkgs-unstable.kubernetes-helmPlugins; [
+      plugins = with kubernetes-helmPlugins; [
         helm-diff # show what would actually change on the server before applying a helm chart
         helm-mapkubeapis # show usage of deprecated or removed k8s apis in helm charts
         # for later
