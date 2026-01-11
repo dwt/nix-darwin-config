@@ -41,6 +41,7 @@
     magic-wormhole # send files and folders securely without a server
     sad # search and replace (sed on steroids)
     fresh-editor # terminal based text editor with full tree sitter and lsp support
+    glow # markdown viewer in terminal
 
     # AI stuff
     # interact with llms from the command line
