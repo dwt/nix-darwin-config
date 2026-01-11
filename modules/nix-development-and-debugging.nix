@@ -17,7 +17,7 @@ in
     environment.systemPackages = with pkgs; [
       # TODO move these out into their own module
       ## nix development
-      nixfmt-rfc-style # format *.nix files
+      nixfmt # format *.nix files
       nixd # language server
       nil # language server
       # https://github.com/maralorn/nix-output-monitor
