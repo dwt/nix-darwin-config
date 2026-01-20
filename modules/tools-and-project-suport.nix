@@ -151,6 +151,7 @@
         # helm-secrets # use sops to manage secrets in helm charts
       ];
     })
+    helm-ls # helm language server
 
     # Other clouds
     hcloud
