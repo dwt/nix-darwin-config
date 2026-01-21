@@ -23,6 +23,7 @@
     fzf # fuzzy finder with integration into many tools
     # httpie # curl with a better interface
     curlie # curl with httpie interface
+    httpyac # .http and .rest file support
     zoxide # direct jumping to deep directories
     watch # run a command every second
     # FIXME collides with nix package lookup!
