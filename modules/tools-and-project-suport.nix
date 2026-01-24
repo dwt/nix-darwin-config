@@ -17,7 +17,7 @@
   environment.systemPackages = with pkgs; [
     # direnv # .envrc automatic project configuration -> configured below
     devenv # friendlier nix project configuration
-    pre-commit # git hooks
+    prek # git hooks manager
     uv # faster pip
 
     fzf # fuzzy finder with integration into many tools
