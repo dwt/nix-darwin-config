@@ -47,7 +47,6 @@
     # AI stuff
     # interact with llms from the command line
     (llm.withPlugins {
-      # TODO install llm-lmstudio (needs packaging)
       # Use LLM to generate and execute commands in your shell <https://github.com/simonw/llm-cmd>
       llm-cmd = true;
 
@@ -60,17 +59,8 @@
       # LLM fragment plugin to load a PDF as a sequence of images <https://github.com/simonw/llm-pdf-to-images>
       # llm-pdf-to-images = true;
 
-      # LLM plugin for embeddings using sentence-transformers <https://github.com/simonw/llm-sentence-transformers>
-      # llm-sentence-transformers = true;
-
-      # Load LLM templates from GitHub repositories <https://github.com/simonw/llm-templates-github>
-      # llm-templates-github = true;
-
-      # LLM tools for running queries against SQLite <https://github.com/simonw/llm-tools-sqlite>
-      # llm-tools-sqlite = true;
-
-      # JavaScript execution as a tool for LLM <https://github.com/simonw/llm-tools-quickjs>
-      # llm-tools-quickjs = true;
+      # use models from LM Studio
+      llm-lmstudio = true;
 
       # LLM plugin providing access to GitHub Copilot <https://github.com/jmdaly/llm-github-copilot>
       # always requests the model list for every command. Not sure I want that.
