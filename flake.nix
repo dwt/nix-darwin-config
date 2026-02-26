@@ -26,31 +26,32 @@
   outputs =
     inputs@{
       self,
-      nixpkgs,
-      # lix-module,
       nix-darwin,
       nix-index-database,
       ...
     }:
     let
       system = "aarch64-darwin";
-      pkgs = nixpkgs.legacyPackages.${system};
+      darwin = nix-darwin.lib.darwinSystem {
+        inherit system;
+        # inputs are used for imports, so need to be passed via specialArgs to prevent infinite recursion
+        specialArgs = { inherit inputs; };
+        modules = [
+          nix-index-database.darwinModules.nix-index # REFACT move, but don't know yet where
+          ./configuration.nix
+        ];
+      };
+
+      # take the instantiated nixpkgs out of darwin to prevent a double nixpkgs instantiation
+      # this prevents a small speed hit, but most important it ensures that all nixpkgs instances use the same config
+      pkgs = darwin.pkgs;
     in
     {
       lib = pkgs.callPackage ./lib { };
       apps.${system} = self.lib.readShellScripts ./bin;
 
-      # Build darwin flake using:
-      # $ bin/switch
-      darwinConfigurations."Sokrates" = nix-darwin.lib.darwinSystem {
-        inherit system;
-        # inputs are used for imports, so need to be passed via specialArgs to prevent infinite recursion
-        specialArgs = { inherit inputs; };
-        modules = [
-          # lix-module.nixosModules.default # REFACT move into nix-and-system-setup
-          nix-index-database.darwinModules.nix-index # REFACT move, but don't know yet where
-          ./configuration.nix
-        ];
-      };
+      # Build darwin flake using: bin/switch
+      darwinConfigurations."Sokrates" = darwin;
+
     };
 }
