@@ -5,19 +5,16 @@
     # nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-25.11-darwin";
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    # nixpkgs-unstable.url = "github:NixOS/nixpkgs/pull/445223/head";
-    # nixpkgs-master.url = "github:NixOS/nixpkgs/master";
-    # nixpkgs-local.url = "/Users/dwt/Code/Projekte/nix/nixpkgs/";
-    # nix-darwin.url = "github:nix-darwin/nix-darwin/nix-darwin-25.05";
+    # nixpkgs-local.url = "/Users/dwt/Code/Projekte/nix/nixpkgs/"; # test changes before creating a pull request
+    # nixpkgs-unstable.url = "github:NixOS/nixpkgs/pull/445223/head"; # test pull requests
+    # nixpkgs-master.url = "github:NixOS/nixpkgs/master"; # if unstable is too old
+    # nix-darwin.url = "github:nix-darwin/nix-darwin/nix-darwin-25.11"; # should I ever want to go back to a stable branch
     nix-darwin.url = "github:nix-darwin/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     nix-rosetta-builder.url = "github:cpick/nix-rosetta-builder";
     # when I want to test changes from me
     # nix-rosetta-builder.url = "github:dwt/nix-rosetta-builder/cleanup-on-disable";
     nix-rosetta-builder.inputs.nixpkgs.follows = "nixpkgs-unstable";
-    # home-manager.url = "github:nix-community/home-manager";
-    # home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    # nix-index == nix-locate but with automatic database updates
     nix-index-database.url = "github:nix-community/nix-index-database";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -52,27 +49,7 @@
         modules = [
           # lix-module.nixosModules.default # REFACT move into nix-and-system-setup
           nix-index-database.darwinModules.nix-index # REFACT move, but don't know yet where
-          # Work around nodejs compile problem
-          # https://github.com/NixOS/nixpkgs/issues/402079
-          # {
-          #   nixpkgs.overlays = [
-          #     (self: super: {
-          #       nodejs = super.nodejs_22;
-          #       nodejs-slim = super.nodejs-slim_22;
-
-          #     })
-          #   ];
-          # }
           ./configuration.nix
-
-          # {
-          #   home-manager.useGlobalPkgs = true;
-          #   home-manager.useUserPackages = true;
-          #   home-manager.users.dwt = import ./home.nix;
-          #   # Optionally, use home-manager.extraSpecialArgs to pass
-          #   # arguments to home.nix
-          # }
-          # home-manager.darwinModules.home-manager
         ];
       };
     };
