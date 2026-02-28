@@ -21,6 +21,8 @@
       {
         # for the packages that are yet not part of the stable distribution
         pkgs-unstable = mkPkgs inputs.nixpkgs-unstable;
+        # for the fence package from the pull request
+        pkgs-pull-fence = mkPkgs inputs.nixpkgs-pull-fence;
         # for when I am working on a package and want to test / use it after it was merged, but not yet to unstable
         # usually requires compilation, possibly of many dependencies!
         # I don't want to make this too easy, which is why the input is commented out too
@@ -29,4 +31,5 @@
       };
 
   };
+
 }

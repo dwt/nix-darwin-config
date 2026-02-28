@@ -3,6 +3,7 @@
 # then bring over everything that can be installed here $ brew remove <pkg>
 {
   pkgs,
+  pkgs-pull-fence,
   ...
 }:
 {
@@ -45,6 +46,7 @@
     glow # markdown viewer in terminal
 
     # AI stuff
+    pkgs-pull-fence.fence
     # interact with llms from the command line
     (llm.withPlugins {
       # Use LLM to generate and execute commands in your shell <https://github.com/simonw/llm-cmd>

@@ -97,6 +97,22 @@
         "type": "github"
       }
     },
+    "nixpkgs-pull-fence": {
+      "locked": {
+        "lastModified": 1771588994,
+        "narHash": "sha256-CrfCgPZvw12BNB/PRqXr2MPJkUe4od1h7IMHLwyfa/o=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "70dc68a1d76bebee9c85d782941d0edbd3cee66b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "pull/481033/head",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nixpkgs-unstable": {
       "locked": {
         "lastModified": 1771923393,
@@ -120,6 +136,7 @@
         "nix-index-database": "nix-index-database",
         "nix-rosetta-builder": "nix-rosetta-builder",
         "nixpkgs": "nixpkgs",
+        "nixpkgs-pull-fence": "nixpkgs-pull-fence",
         "nixpkgs-unstable": "nixpkgs-unstable"
       }
     }
