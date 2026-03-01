@@ -97,6 +97,22 @@
         "type": "github"
       }
     },
+    "nixpkgs-pull-fast-cli": {
+      "locked": {
+        "lastModified": 1772295731,
+        "narHash": "sha256-e00+BfuEZumgS+4Z6A6mWJzrSiSlDNinVs5jyXweDp4=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "c6c7deafc060e0281918c28765794593ec8adbd0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "pull/493300/head",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nixpkgs-pull-fence": {
       "locked": {
         "lastModified": 1772291617,
@@ -109,6 +125,22 @@
       "original": {
         "owner": "NixOS",
         "ref": "pull/481033/head",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs-stable": {
+      "locked": {
+        "lastModified": 1772068791,
+        "narHash": "sha256-2JWs4yBVGdWHkHAVtGhzRjqHmwCmyxuql5EoAtg/Huc=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "a669fd57cfdf64a6d93d8f854958df35009dc46f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-25.11-darwin",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -136,7 +168,9 @@
         "nix-index-database": "nix-index-database",
         "nix-rosetta-builder": "nix-rosetta-builder",
         "nixpkgs": "nixpkgs",
+        "nixpkgs-pull-fast-cli": "nixpkgs-pull-fast-cli",
         "nixpkgs-pull-fence": "nixpkgs-pull-fence",
+        "nixpkgs-stable": "nixpkgs-stable",
         "nixpkgs-unstable": "nixpkgs-unstable"
       }
     }

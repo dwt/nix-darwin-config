@@ -4,6 +4,7 @@
   inputs = {
     # nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-25.11-darwin";
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixpkgs-25.11-darwin";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     # nixpkgs-local.url = "/Users/dwt/Code/Projekte/nix/nixpkgs/"; # test changes before creating a pull request
     # nixpkgs-unstable.url = "github:NixOS/nixpkgs/pull/445223/head"; # test pull requests
