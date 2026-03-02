@@ -3,7 +3,6 @@
 # then bring over everything that can be installed here $ brew remove <pkg>
 {
   pkgs,
-  pkgs-pull-fence,
   pkgs-pull-fast-cli,
   ...
 }:
@@ -48,7 +47,7 @@
     pkgs-pull-fast-cli.fast-cli # checks interenet connection speed
 
     # AI stuff
-    pkgs-pull-fence.fence
+    fence # sandbox AI agents
     # interact with llms from the command line
     (llm.withPlugins {
       # Use LLM to generate and execute commands in your shell <https://github.com/simonw/llm-cmd>

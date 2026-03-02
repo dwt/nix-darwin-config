@@ -7,7 +7,7 @@
   environment.systemPackages = with pkgs; [
     # Tools and fun stuff
     # Dependency Bug: https://github.com/NixOS/nixpkgs/pull/493943
-    pkgs-stable.yt-dlp # Download movies / audio from almost all websites
+    yt-dlp # Download movies / audio from almost all websites
     ffmpeg # Video and audio converter and all around swiss army knife, required for yt-dlp to extract audio
     fortune # Show a random quote on login
 
