@@ -3,6 +3,7 @@
 # then bring over everything that can be installed here $ brew remove <pkg>
 {
   pkgs,
+  pkgs-unstable-small,
   ...
 }:
 {
@@ -46,6 +47,7 @@
     glow # markdown viewer in terminal
     fast-cli-zig # checks interenet connection speed
 
+
     # AI stuff
     fence # sandbox AI agents
     pi-coding-agent # very minimal coding agent. Needs sandbox, as there is no tool policy / allowing
@@ -76,6 +78,7 @@
       # always requests the model list for every command. Not sure I want that.
       # llm-ollama = true;
     })
+
 
     # linters / language servers
     shellcheck # lint shell scripts
@@ -187,6 +190,7 @@
   # automatic project activation from .envrc file when entering a directory
   programs.direnv = {
     enable = true;
+    package = pkgs-unstable-small.direnv;
     nix-direnv.enable = true; # faster flake activation times
     # silent = true; # stop output from direnv activation
     direnvrcExtra = ''
