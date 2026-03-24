@@ -21,6 +21,7 @@
     prek # git hooks manager
 
     fzf # fuzzy finder with integration into many tools
+    television # fuzzy finder with great tui
     # httpie # curl with a better interface
     curlie # curl with httpie interface
     httpyac # .http and .rest file support
@@ -47,6 +48,9 @@
 
     # AI stuff
     fence # sandbox AI agents
+    pi-coding-agent # very minimal coding agent. Needs sandbox, as there is no tool policy / allowing
+    mistral-vibe # python textual / rich based coding agent
+
     # interact with llms from the command line
     (llm.withPlugins {
       # Use LLM to generate and execute commands in your shell <https://github.com/simonw/llm-cmd>
@@ -161,6 +165,10 @@
     # _1password-cli # password manager
     # probaly best activated with programms._1password.enable
   ];
+
+  # nixpkgs.config.allowUnfreePackages = [
+  #     "textual-speedups" # required by mistral-vibe
+  # ];
 
   # REFACT these should quite possibly go into home manager
   environment.variables = {

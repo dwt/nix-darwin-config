@@ -1,6 +1,5 @@
 {
   pkgs,
-  pkgs-stable,
   ...
 }:
 {
@@ -22,5 +21,6 @@
     "quake3-ioquake3-0-unstable-2025-05-15"
     "quake3arenadata"
     "quake3-pointrelease"
+    "textual-speedups" # required by mistral-vibe FIXME this should be in tools-and-projects-support.nix but that overrides this setting!
   ];
 }
