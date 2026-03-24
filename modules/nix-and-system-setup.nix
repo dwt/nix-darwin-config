@@ -89,7 +89,7 @@
 
   # This works with a feature of nix-direnv that automatically touches used direnv-gc-roots on environment activation
   launchd.daemons.nh-nix-garbage-collector = {
-    command = "${lib.getExe pkgs.nh} clean all --keep 5 --keep-since 2w --verbose --optimise";
+    command = "${lib.getExe pkgs.nh} clean all --keep 5 --keep-since 4w --verbose --optimise";
     path = [ config.nix.package ];
     serviceConfig = {
       LowPriorityIO = true;
