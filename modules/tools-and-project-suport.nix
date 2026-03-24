@@ -3,7 +3,6 @@
 # then bring over everything that can be installed here $ brew remove <pkg>
 {
   pkgs,
-  pkgs-pull-fast-cli,
   ...
 }:
 {
@@ -44,7 +43,7 @@
     sad # search and replace (sed on steroids)
     fresh-editor # terminal based text editor with full tree sitter and lsp support
     glow # markdown viewer in terminal
-    pkgs-pull-fast-cli.fast-cli # checks interenet connection speed
+    fast-cli-zig # checks interenet connection speed
 
     # AI stuff
     fence # sandbox AI agents

@@ -8,7 +8,7 @@
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     # nixpkgs-local.url = "/Users/dwt/Code/Projekte/nix/nixpkgs/"; # test changes before creating a pull request
     # nixpkgs-unstable.url = "github:NixOS/nixpkgs/pull/445223/head"; # test pull requests
-    nixpkgs-pull-fast-cli.url = "github:NixOS/nixpkgs/pull/493300/head"; # test pull requests
+    # nixpkgs-pull-fast-cli.url = "github:NixOS/nixpkgs/pull/493300/head"; # test pull requests
     # nixpkgs-master.url = "github:NixOS/nixpkgs/master"; # if unstable is too old
 
     # nix-darwin.url = "github:nix-darwin/nix-darwin/nix-darwin-25.11"; # should I ever want to go back to a stable branch
