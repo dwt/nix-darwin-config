@@ -10,3 +10,4 @@
   * `nix flake update nixpkgs nixpkgs-unstable; bin/diff; bin/switch` on a schedule?
 * [ ] Start managing homebrew
 * [ ] Start managing ~/.config for shell tools. See @afh's repo for inspiration:
+* [ ] entweder mit homeserver config zusammenführen, oder ein modul wiederverwendbar machen, damit ich eine standard umgebung auf beiden systemen habe
