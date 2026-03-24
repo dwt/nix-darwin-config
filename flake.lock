@@ -113,6 +113,22 @@
         "type": "github"
       }
     },
+    "nixpkgs-unstable-small": {
+      "locked": {
+        "lastModified": 1774321912,
+        "narHash": "sha256-Nna0UkHU2xmhyx0VAel4DDdwpAlA70ZgzAtOD4m3Pc8=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "b0d3faa43b2bd4cc22fdf98ee00cac4f2f47ac8a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable-small",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "mkk-vpn": "mkk-vpn",
@@ -120,7 +136,8 @@
         "nix-index-database": "nix-index-database",
         "nix-rosetta-builder": "nix-rosetta-builder",
         "nixpkgs": "nixpkgs",
-        "nixpkgs-unstable": "nixpkgs-unstable"
+        "nixpkgs-unstable": "nixpkgs-unstable",
+        "nixpkgs-unstable-small": "nixpkgs-unstable-small"
       }
     }
   },
