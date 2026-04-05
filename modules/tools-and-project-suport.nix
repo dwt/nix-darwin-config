@@ -77,7 +77,6 @@
       # llm-ollama = true;
     })
 
-
     # linters / language servers
     shellcheck # lint shell scripts
     shfmt # format bash scripts
@@ -168,7 +167,7 @@
   ];
 
   # nixpkgs.config.allowUnfreePackages = [
-  #     "textual-speedups" # required by mistral-vibe
+  #   "textual-speedups" # required by mistral-vibe
   # ];
 
   # REFACT these should quite possibly go into home manager
