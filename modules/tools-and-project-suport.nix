@@ -3,7 +3,6 @@
 # then bring over everything that can be installed here $ brew remove <pkg>
 {
   pkgs,
-  pkgs-unstable-small,
   ...
 }:
 {
@@ -46,7 +45,6 @@
     fresh-editor # terminal based text editor with full tree sitter and lsp support
     glow # markdown viewer in terminal
     fast-cli-zig # checks interenet connection speed
-
 
     # AI stuff
     fence # sandbox AI agents
@@ -190,7 +188,6 @@
   # automatic project activation from .envrc file when entering a directory
   programs.direnv = {
     enable = true;
-    package = pkgs-unstable-small.direnv;
     nix-direnv.enable = true; # faster flake activation times
     # silent = true; # stop output from direnv activation
     direnvrcExtra = ''
