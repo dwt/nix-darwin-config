@@ -54,6 +54,7 @@
       experimental-features = [
         "nix-command"
         "flakes"
+        # pipe data through multiple functions
         "pipe-operator"
       ];
 
@@ -63,8 +64,8 @@
       sandbox = "relaxed";
       # disable temporarily with `--option sandbox false`
 
-      # FIXME how to set this from the configuration?
-      # log-format = "multiline-with-logs";
+      # far better default output
+      log-format = "multiline-with-logs";
 
       extra-nix-path = "nixpkgs=flake:nixpkgs";
       trusted-users = [
