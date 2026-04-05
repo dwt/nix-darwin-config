@@ -50,11 +50,14 @@
     fence # sandbox AI agents
     pi-coding-agent # very minimal coding agent. Needs sandbox, as there is no tool policy / allowing
     mistral-vibe # python textual / rich based coding agent
+    claude-code # the og coding agent
 
     # interact with llms from the command line
     (llm.withPlugins {
       # Use LLM to generate and execute commands in your shell <https://github.com/simonw/llm-cmd>
       llm-cmd = true;
+
+      llm-anthropic = true; # claude
 
       # AI-powered Git commands for the LLM CLI tool <https://github.com/OttoAllmendinger/llm-git>
       # llm-git = true;
