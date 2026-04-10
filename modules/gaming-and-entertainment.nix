@@ -25,5 +25,6 @@
     # https://github.com/nix-darwin/nix-darwin/pull/1742
     "textual-speedups" # required by mistral-vibe FIXME this should be in tools-and-projects-support.nix but that overrides this setting!
     "claude-code"
+    "github-copilot-cli"
   ];
 }

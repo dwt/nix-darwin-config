@@ -51,6 +51,7 @@
     pi-coding-agent # very minimal coding agent. Needs sandbox, as there is no tool policy / allowing
     mistral-vibe # python textual / rich based coding agent
     claude-code # the og coding agent
+    github-copilot-cli # github copilot coding agent
 
     # interact with llms from the command line
     (llm.withPlugins {
