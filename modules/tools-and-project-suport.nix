@@ -52,6 +52,8 @@
     mistral-vibe # python textual / rich based coding agent
     claude-code # the og coding agent
     github-copilot-cli # github copilot coding agent
+    codex # openai coding agent
+    # codex-acp # acp version
 
     # interact with llms from the command line
     (llm.withPlugins {
