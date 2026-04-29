@@ -52,7 +52,7 @@
     claude-code # the og coding agent
     github-copilot-cli # github copilot coding agent
     codex # openai coding agent
-    # codex-acp # acp version
+    # codex-acp # currently installed via zed plugin
 
     # interact with llms from the command line
     (llm.withPlugins {
