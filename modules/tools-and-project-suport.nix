@@ -97,6 +97,7 @@
 
     # work with structured data
     jq # json query
+    jiq # interactive jq with a TUI
     yq-go # jq for yaml
     jo # generate json from the shell
     jless # structured less for yaml/json
