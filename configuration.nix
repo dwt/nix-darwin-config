@@ -21,8 +21,6 @@
     ./modules/gaming-and-entertainment.nix
   ];
 
-  nix-development-and-debugging.enable = true;
-
   # homebrew = {
   #   enable = true;
   # };

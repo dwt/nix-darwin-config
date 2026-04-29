@@ -41,7 +41,6 @@
         # inputs are used for imports, so need to be passed via specialArgs to prevent infinite recursion
         specialArgs = { inherit inputs; };
         modules = [
-          nix-index-database.darwinModules.nix-index # REFACT move, but don't know yet where
           ./configuration.nix
         ];
       };
