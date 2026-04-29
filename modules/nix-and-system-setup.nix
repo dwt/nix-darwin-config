@@ -44,6 +44,8 @@
       # I do not want to lock down master to the version built with this flake
       # as master is supposed to point to the latest and greatest
       nixpkgs-master.to = builtins.parseFlakeRef "github:NixOS/nixpkgs/master";
+      # lots of prepackaged llm and agentic coding tools
+      llm-agents.to = builtins.parseFlakeRef "github:numtide/llm-agents.nix";
       # I don't want to point to a local path, until I find a better way, it stays like this
       # Consider: could I point to my github mirror? But I want to use it to point to things in development. :(
       # user   flake:nixpkgs-local path:/Users/dwt/Code/Projekte/nix/nixpkgs
