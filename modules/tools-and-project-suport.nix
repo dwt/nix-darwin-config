@@ -190,6 +190,22 @@
     };
   };
 
+  # workaround for https://github.com/NixOS/nixpkgs/issues/513543
+  # Fixed in https://github.com/NixOS/nixpkgs/pull/513971 - waiting for merge-train
+  # https://nixpk.gs/pr-tracker.html?pr=513971
+  nixpkgs.overlays = [
+    (self: super: {
+      zsh = super.zsh.overrideAttrs (
+        old:
+        super.lib.optionalAttrs super.stdenv.isDarwin {
+          preConfigure = (old.preConfigure or "") + ''
+            export zsh_cv_sys_sigsuspend=yes
+          '';
+        }
+      );
+    })
+  ];
+
   # automatic project activation from .envrc file when entering a directory
   programs.direnv = {
     enable = true;
