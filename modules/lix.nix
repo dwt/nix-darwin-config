@@ -19,6 +19,7 @@ in
     # nix-review still warns about unknown config options -> still using the wrong nix?
     nix-init # create initial nix package from project url
     nix-update # update nixpkgs packages
+    # consider to add nixos-rebuild-ng
   ];
   programs.direnv.nix-direnv.package = packageSet.nix-direnv;
 
