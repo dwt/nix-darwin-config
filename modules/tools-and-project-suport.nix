@@ -165,7 +165,7 @@
     # essential python tooling
     python314 # interpreter
     # jupyterlab # notebook server
-    # marimo # notebook server with auto cell re-execution if variables change
+    marimo # notebook server with auto cell re-execution if variables change
 
     # secret access
     # Not yet, because GUI apps installed via nix-darwin don't fully work yet
