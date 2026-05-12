@@ -54,6 +54,8 @@
     github-copilot-cli # github copilot coding agent
     codex # openai coding agent
     # codex-acp # currently installed via zed plugin
+    opencode # js coding agent
+    opencode-desktop # gui
 
     # interact with llms from the command line
     (llm.withPlugins {
