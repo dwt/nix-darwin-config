@@ -48,14 +48,13 @@
 
     # AI stuff
     fence # sandbox AI agents
-    pi-coding-agent # very minimal coding agent. Needs sandbox, as there is no tool policy / allowing
+    pi-coding-agent # very minimal coding agent. Needs sandbox, as there is no tool policy / allowing (js)
     # not really used, but experimenting with
     claude-code # the og coding agent
     github-copilot-cli # github copilot coding agent
     codex # openai coding agent
     # codex-acp # currently installed via zed plugin
-    opencode # js coding agent
-    opencode-desktop # gui
+    opencode # community driven coding agent (js)
 
     # interact with llms from the command line
     (llm.withPlugins {
