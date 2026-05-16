@@ -50,7 +50,7 @@
     fence # sandbox AI agents
     pi-coding-agent # very minimal coding agent. Needs sandbox, as there is no tool policy / allowing (js)
     # not really used, but experimenting with
-    claude-code # the og coding agent
+    claude-code # the og coding agent (js)
     github-copilot-cli # github copilot coding agent
     codex # openai coding agent
     # codex-acp # currently installed via zed plugin
