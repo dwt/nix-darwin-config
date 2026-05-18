@@ -55,6 +55,8 @@
     codex # openai coding agent
     # codex-acp # currently installed via zed plugin
     opencode # community driven coding agent (js)
+    goose-cli # community driven coding agent (rust/js)
+    crush # community driven coding agent (go)
 
     # interact with llms from the command line
     (llm.withPlugins {

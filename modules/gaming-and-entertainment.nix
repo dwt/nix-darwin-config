@@ -26,5 +26,6 @@
     "textual-speedups" # required by mistral-vibe FIXME this should be in tools-and-projects-support.nix but that overrides this setting!
     "claude-code"
     "github-copilot-cli"
+    "crush" # FSL-1.1-MIT, not sure why considered closed source by nixpkgs
   ];
 }
