@@ -21,11 +21,5 @@
     "quake3-ioquake3-0-unstable-2025-05-15"
     "quake3arenadata"
     "quake3-pointrelease"
-    # duplicated here to reduce to single allowUnfreePackages until nix-darwin merges
-    # https://github.com/nix-darwin/nix-darwin/pull/1742
-    "textual-speedups" # required by mistral-vibe FIXME this should be in tools-and-projects-support.nix but that overrides this setting!
-    "claude-code"
-    "github-copilot-cli"
-    "crush" # FSL-1.1-MIT, not sure why considered closed source by nixpkgs
   ];
 }

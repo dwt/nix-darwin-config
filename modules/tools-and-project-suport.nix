@@ -242,4 +242,10 @@
       }
     '';
   };
+
+  nixpkgs.config.allowUnfreePackages = [
+    "claude-code"
+    "github-copilot-cli"
+    "crush" # FSL-1.1-MIT, not sure why considered closed source by nixpkgs
+  ];
 }
