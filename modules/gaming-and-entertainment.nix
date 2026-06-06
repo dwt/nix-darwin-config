@@ -16,6 +16,7 @@
     # mumble doesn't like the sandbox either right now :-(
     quake3arena-hires # The original deathmatch game
   ];
+
   nixpkgs.config.allowUnfreePackages = [
     "ut1999"
     "quake3-ioquake3-0-unstable-2025-05-15"
