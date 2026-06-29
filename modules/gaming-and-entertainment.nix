@@ -21,6 +21,7 @@
     "ut1999"
     "quake3-ioquake3-0-unstable-2025-05-15"
     "quake3arenadata"
+    "pak0.pk3"
     "quake3-pointrelease"
   ];
 }
