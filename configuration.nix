@@ -13,6 +13,7 @@
     ./modules/nix-linux-rosetta-builder.nix
     ./modules/enable-fish-support.nix
     ./modules/nix-development-and-debugging.nix
+    ./modules/zmx.nix
 
     # development workflow setup
     ./modules/tools-and-project-suport.nix

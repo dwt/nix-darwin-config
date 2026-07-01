@@ -25,6 +25,8 @@
     # mkk specific stuff
     mkk-vpn.url = "git+ssh://git@gitlab.com/bkkvbu/shared/openconnect-vpn-config";
     mkk-vpn.inputs.nixpkgs.follows = "nixpkgs";
+
+    zmx.url = "github:neurosnap/zmx";
   };
 
   outputs =

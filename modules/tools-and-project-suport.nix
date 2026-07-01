@@ -1,11 +1,10 @@
 # To clean out brew installed stuff
 # brew leaves | xargs -n1 brew deps --installed --tree
 # then bring over everything that can be installed here $ brew remove <pkg>
+{ pkgs, ... }:
 {
-  pkgs,
-  ...
-}:
-{
+  programs.zmx.enable = true;
+
   # fonts.packages = with pkgs; [
   #   iosevka # terminal /programming font
   #   nerd-fonts.iosevka # iosevka with nerd font glyphs
