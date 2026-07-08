@@ -26,6 +26,7 @@
   # plugins should auto activate
   environment.systemPackages = [
     pkgs.fishPlugins.done # notify me when long running commands finish in the background
+    # TODO intel only, deprecated. replace by https://github.com/vjeantet/alerter oder https://github.com/saihgupr/NotifiCLI
     # required by fishPlugins.done to post notifications
     pkgs.terminal-notifier
     pkgs.fishPlugins.autopair # auto insert matching parens and quotes
