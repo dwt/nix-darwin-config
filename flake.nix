@@ -5,7 +5,7 @@
     # nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-25.11-darwin";
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     # nixpkgs-stable.url = "github:NixOS/nixpkgs/nixpkgs-25.11-darwin";
-    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    # nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     # nixpkgs-unstable-small.url = "github:NixOS/nixpkgs/nixos-unstable-small";
     # nixpkgs-local.url = "/Users/dwt/Code/Projekte/nix/nixpkgs/"; # test changes before creating a pull request
     # nixpkgs-unstable.url = "github:NixOS/nixpkgs/pull/445223/head"; # test pull requests
@@ -18,7 +18,7 @@
     nix-rosetta-builder.url = "github:cpick/nix-rosetta-builder";
     # when I want to test changes from me
     # nix-rosetta-builder.url = "github:dwt/nix-rosetta-builder/cleanup-on-disable";
-    nix-rosetta-builder.inputs.nixpkgs.follows = "nixpkgs-unstable";
+    nix-rosetta-builder.inputs.nixpkgs.follows = "nixpkgs";
     nix-index-database.url = "github:nix-community/nix-index-database";
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
 

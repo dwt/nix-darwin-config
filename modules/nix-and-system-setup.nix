@@ -40,7 +40,7 @@
 
     # extra registry entries
     registry = {
-      nixpkgs-unstable.flake = inputs.nixpkgs-unstable;
+      # nixpkgs-unstable.flake = inputs.nixpkgs-unstable;
       # I do not want to lock down master to the version built with this flake
       # as master is supposed to point to the latest and greatest
       nixpkgs-master.to = builtins.parseFlakeRef "github:NixOS/nixpkgs/master";

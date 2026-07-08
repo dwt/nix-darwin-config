@@ -26,7 +26,7 @@ in
   # https://git.lix.systems/lix-project/lix/issues/989
   # nixpkgs.overlays = [
   #   (final: prev: {
-  #     lix = pkgs-unstable.lixPackageSets.latest.lix;
+  #     lix = pkgs.lixPackageSets.latest.lix;
   #     inherit (final.lixPackageSets.latest)
   #       nixpkgs-review
   #       nix-direnv

@@ -1,9 +1,10 @@
 {
   inputs,
-  lib,
-  pkgs-unstable,
   ...
 }:
+let
+  builder = inputs.nix-rosetta-builder;
+in
 {
   # https://github.com/cpick/nix-rosetta-builder
   # More details on configuring this:
@@ -20,7 +21,7 @@
     # a second time. Subsequently, `nix-rosetta-builder` can rebuild itself.
     # show launchctl info
     # sudo launchctl list org.nixos.rosetta-builderd
-    inputs.nix-rosetta-builder.darwinModules.default
+    builder.darwinModules.default
   ];
 
   # I want this builder to not take up ram all the time.
@@ -32,12 +33,6 @@
     onDemand = true;
     onDemandLingerMinutes = 10;
     memory = "8GiB";
-    potentiallyInsecureExtraNixosModule = {
-      # rosetta builder runs on unstable
-      environment.systemPackages = with pkgs-unstable; [
-        btop
-      ];
-    };
   };
 
 }
