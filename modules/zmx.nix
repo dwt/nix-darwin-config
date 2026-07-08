@@ -37,33 +37,8 @@ let
           xcrunWrapper
           xcodeselectWrapper
         ];
-        SDKROOT = sdkRoot;
         zigTarget =
           if pkgs.stdenv.hostPlatform.isAarch64 then "aarch64-macos.13.0" else "x86_64-macos.13.0";
-        postPatch = ''
-          python3 - <<'PY'
-          from pathlib import Path
-
-          path = Path("build.zig")
-          text = path.read_text()
-          text = text.replace(
-              "        exe.linkLibC();",
-              "        if (target.result.os.tag == .macos) exe.use_lld = false;\n        exe.linkLibC();",
-              1,
-          )
-          text = text.replace(
-              "        exe_check.linkLibC();",
-              "        if (target.result.os.tag == .macos) exe_check.use_lld = false;\n        exe_check.linkLibC();",
-              1,
-          )
-          text = text.replace(
-              "            release_exe.linkLibC();",
-              "            if (resolved.result.os.tag == .macos) release_exe.use_lld = false;\n            release_exe.linkLibC();",
-              1,
-          )
-          path.write_text(text)
-          PY
-        '';
       };
     in
     pkgs.runCommand unwrapped.name
