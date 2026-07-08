@@ -1,4 +1,5 @@
 # This is a testbed of how I can upstream this to nixpkgs
+# Remove once https://nixpk.gs/pr-tracker.html?pr=533683 arrives in unstable
 {
   config,
   inputs,
@@ -74,15 +75,10 @@ let
         mkdir -p $out/bin
         ln -s ${unwrapped}/bin/zmx $out/bin/zmx
 
-        echo '#compdef zmx' > _zmx
-        $out/bin/zmx completions zsh >> _zmx
-        installShellCompletion --zsh _zmx
-
-        $out/bin/zmx completions bash > zmx.bash
-        installShellCompletion --bash zmx.bash
-
-        $out/bin/zmx completions fish > zmx.fish
-        installShellCompletion --fish zmx.fish
+        installShellCompletion --cmd ${finalAttrs.meta.mainProgram} \
+        --bash <($out/bin/zmx completions bash) \
+        --zsh <($out/bin/zmx completions zsh) \
+        --fish <($out/bin/zmx completions fish)
       '';
 in
 {
