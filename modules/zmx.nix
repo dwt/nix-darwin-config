@@ -75,7 +75,7 @@ let
         mkdir -p $out/bin
         ln -s ${unwrapped}/bin/zmx $out/bin/zmx
 
-        installShellCompletion --cmd ${finalAttrs.meta.mainProgram} \
+        installShellCompletion --cmd zmx \
         --bash <($out/bin/zmx completions bash) \
         --zsh <($out/bin/zmx completions zsh) \
         --fish <($out/bin/zmx completions fish)
