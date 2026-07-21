@@ -3,8 +3,6 @@
 # then bring over everything that can be installed here $ brew remove <pkg>
 { pkgs, ... }:
 {
-  programs.zmx.enable = true;
-
   # fonts.packages = with pkgs; [
   #   iosevka # terminal /programming font
   #   nerd-fonts.iosevka # iosevka with nerd font glyphs
@@ -44,6 +42,7 @@
     fresh-editor # terminal based text editor with full tree sitter and lsp support
     glow # markdown viewer in terminal
     fast-cli-zig # checks interenet connection speed
+    zmx # shell session manager
 
     # AI stuff
     fence # sandbox AI agents
