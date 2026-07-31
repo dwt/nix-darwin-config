@@ -48,13 +48,9 @@
     fence # sandbox AI agents
     pi-coding-agent # very minimal coding agent. Needs sandbox, as there is no tool policy / allowing (js)
     # not really used, but experimenting with
-    claude-code # the og coding agent (js)
-    github-copilot-cli # github copilot coding agent
     codex # openai coding agent
     # codex-acp # currently installed via zed plugin
     opencode # community driven coding agent (js)
-    goose-cli # community driven coding agent (rust/js)
-    crush # community driven coding agent (go)
 
     # interact with llms from the command line
     (llm.withPlugins {
@@ -242,8 +238,5 @@
   };
 
   nixpkgs.config.allowUnfreePackages = [
-    "claude-code"
-    "github-copilot-cli"
-    "crush" # FSL-1.1-MIT, not sure why considered closed source by nixpkgs
   ];
 }
