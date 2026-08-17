@@ -52,6 +52,7 @@
     # codex-acp # currently installed via zed plugin
     opencode # community driven coding agent (js)
     tuicr # code review tui for github and gitlab, but also with support for getting that feedback to an agent
+    agent-browser # like rodney, a browser that allows the agent to access websites.
 
     # interact with llms from the command line
     (llm.withPlugins {
