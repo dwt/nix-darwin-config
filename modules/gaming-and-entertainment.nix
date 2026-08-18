@@ -13,13 +13,17 @@
     # Games
     # Doesn't like the lix build sandbox right now. :-(
     ut1999 # The original Unreal Tournament
-    # mumble doesn't like the sandbox either right now :-(
     quake3arena-hires # The original deathmatch game
   ];
 
+  # needs patch in nix-darwin, so far only supported on nixos
+  # system.extraDependencies = with pkgs; [
+  #   ut1999.passthru.isos # cache for speedup
+  # ];
+
   nixpkgs.config.allowUnfreePackages = [
     "ut1999"
-    "quake3-ioquake3-0-unstable-2025-05-15"
+    "quake3-ioquake3-0-unstable-2026-07-19"
     "quake3arenadata"
     "pak0.pk3"
     "quake3-pointrelease"
