@@ -113,6 +113,7 @@
     difftastic # git diff highlighter - syntax aware
     gh # github cli
     glab # gitlab cli
+    forgejo-cli # forgejo cli
     diffuse # diff3 gui tool
     python313Packages.nbdime # diff and merge for jupyter notebooks
 
