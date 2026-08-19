@@ -140,6 +140,7 @@
 
     # working with kubernetes
     kubectl # kubernetes cli
+    kubectl-df-pv # df like display for persistent volumes
     kubectx # switch between kubernetes contexts and namespaces
     k9s # k8s tui
     kubeseal # encrypt secrets for kubernetes
