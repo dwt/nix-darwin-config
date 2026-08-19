@@ -200,7 +200,7 @@
     (self: super: {
       zsh = super.zsh.overrideAttrs (
         old:
-        super.lib.optionalAttrs super.stdenv.isDarwin {
+        super.lib.optionalAttrs super.stdenv.hostPlatform.isDarwin {
           preConfigure = (old.preConfigure or "") + ''
             export zsh_cv_sys_sigsuspend=yes
           '';
