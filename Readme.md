@@ -7,6 +7,8 @@
 # TODO
 
 * [ ] switch to new linux-builder (if it can auto start. If not, enhance it!)
+  * HOWTO https://nixcademy.com/posts/rosetta-linux-builder-macos/
+  * Bug about auto-shutdown https://github.com/applicative-systems/vzvm/issues/1
 * [ ] split out tools and project supports into different categories. At least AI Stuff, probably two to three more, but haven't decided yet.
 * [ ] Find a way to get automatic security updates for nix packages going
   * `nix flake update nixpkgs nixpkgs-unstable; bin/diff; bin/switch` on a schedule?
