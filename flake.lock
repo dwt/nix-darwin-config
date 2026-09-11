@@ -7,11 +7,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1789127422,
-        "narHash": "sha256-3CmSkafTnZN+i3UNoj5Fys7MqWSdcmOPFRuJn/7RWoY=",
+        "lastModified": 1789134942,
+        "narHash": "sha256-IzA3iTtxf1tl1sPE3mnrA0G8RjaFsRVbGLstZHlFUpQ=",
         "ref": "refs/heads/main",
-        "rev": "cc8a4f2ae247aca927fdf6ffb65e13ad995a1e8f",
-        "revCount": 113,
+        "rev": "8db0325bb0dbac534a417dc5b3d60bcb4899a5ef",
+        "revCount": 120,
         "type": "git",
         "url": "ssh://git@gitlab.com/bkkvbu/shared/openconnect-vpn-config"
       },
