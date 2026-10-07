@@ -7,11 +7,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1790856701,
-        "narHash": "sha256-QMqQpqcZybw4GF8QrEhdRgxr8jTg3Cw4OgiWFg3dCiM=",
+        "lastModified": 1791357345,
+        "narHash": "sha256-0lWL3+CPqJgA3Ngz8wVKOIuT29rubsxWAlH0KYnpPs8=",
         "ref": "refs/heads/main",
-        "rev": "11ec100e447d1c24e7cb582f590929d20dbdd142",
-        "revCount": 145,
+        "rev": "8df91ba4dc88ba53fc418fdce6af10e4d29f8860",
+        "revCount": 147,
         "type": "git",
         "url": "ssh://git@gitlab.com/bkkvbu/shared/openconnect-vpn-config"
       },
@@ -83,11 +83,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1791191277,
-        "narHash": "sha256-i8KuaINOYLvB2oQikGvtRmdZRxATRxsI9Yad2pp7dEA=",
+        "lastModified": 1791306662,
+        "narHash": "sha256-bIhK7AMT7yU8Hkjzaag0MDpqbqiMTvN6UJ0U6Zs63OI=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "aa48d347080940b8a2b8d2f48228674e280a3514",
+        "rev": "e2ccecbf30866802b1db536246e0939eccbd7bfb",
         "type": "github"
       },
       "original": {
