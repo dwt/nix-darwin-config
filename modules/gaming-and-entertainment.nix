@@ -9,7 +9,8 @@
     yt-dlp # Download movies / audio from almost all websites
     ffmpeg # Video and audio converter and all around swiss army knife, required for yt-dlp to extract audio
     # waiting for https://github.com/NixOS/nixpkgs/issues/568679
-    # fortune # Show a random quote on login
+    # brew version deinstallieren
+    fortune-kind # Show a random quote on login
 
     # Games
     # Doesn't like the lix build sandbox right now. :-(
