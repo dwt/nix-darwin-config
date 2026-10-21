@@ -1,6 +1,7 @@
 { pkgs, ... }:
 let
-  packageSet = pkgs.lixPackageSets.latest;
+  # packageSet = pkgs.lixPackageSets.latest;
+  packageSet = pkgs.lixPackageSets.lix_2_96;
   lix = packageSet.lix;
 in
 {
