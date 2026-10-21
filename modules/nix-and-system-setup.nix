@@ -70,6 +70,14 @@
       log-format = "multiline-with-logs";
 
       extra-nix-path = "nixpkgs=flake:nixpkgs";
+      # This is a local root escalation: trusted users can set `post-build-hook`
+      # (via --option, ~/.config/nix/nix.conf, or flake nixConfig + accept-flake-config),
+      # and the nix-daemon executes that hook as root after each build.
+      # https://nixos.org/manual/nix/stable/command-ref/conf-file.html#conf-post-build-hook
+      # https://github.com/NixOS/nix/issues/9649
+      # CTF walkthrough of this exact vector: https://github.com/ubcctf/maple-ctf-2023-public/blob/main/misc/flakey-ci/solve/flake.nix
+      # post-build-hook is not the only root vector for trusted users (e.g. substituters/builders too);
+      # documenting these security implications is tracked in https://github.com/NixOS/nix/issues/11066
       trusted-users = [
         "dwt"
       ];
