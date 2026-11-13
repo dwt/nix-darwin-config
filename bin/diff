@@ -2,7 +2,9 @@
 
 set -eo pipefail
 
-darwin-rebuild build --flake . "$@" 2>&1 | nom
+# Sandbox doesn't work because closure too large, https://git.lix.systems/lix-project/lix/issues/1304
+# re-enable as soon as there is a version of nix that doesn't fail with sandbox enabled
+darwin-rebuild build --flake . --option sandbox false "$@" 2>&1 | nom
 
 # shows version diffs
 nvd -- diff /run/current-system result
