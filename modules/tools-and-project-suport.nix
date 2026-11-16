@@ -73,6 +73,9 @@
       # use models from LM Studio
       llm-lmstudio = true;
 
+      # Use openrouter models
+      llm-openrouter = true;
+
       # LLM plugin providing access to GitHub Copilot <https://github.com/jmdaly/llm-github-copilot>
       # always requests the model list for every command. Not sure I want that.
       # llm-github-copilot = true;
